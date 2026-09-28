@@ -1,0 +1,77 @@
+<!DOCTYPE html> <html lang="pt-BR"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Aurora — Ideias que brilham</title> <style> * { margin: 0; padding: 0; box-sizing: border-box; } html { scroll-behavior: smooth; } body { font-family: Arial, Helvetica, sans-serif; color: #fff; background: #0b1020; line-height: 1.6; } nav { position: fixed; top: 0; width: 100%; padding: 20px 8%; display: flex; justify-content: space-between; align-items: center; background: rgba(11, 16, 32, 0.75); backdrop-filter: blur(10px); z-index: 10; } .logo { font-size: 24px; font-weight: bold; color: #8b5cf6; } nav a { color: #ddd; text-decoration: none; margin-left: 25px; transition: 0.3s; } nav a:hover { color: #a78bfa; } .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 100px 20px 60px; background: radial-gradient(circle at 20% 30%, #4c1d95 0, transparent 30%), radial-gradient(circle at 80% 70%, #1d4ed8 0, transparent 30%), #0b1020; } .hero-content { max-width: 750px; } .hero h1 { font-size: clamp(45px, 8vw, 80px); line-height: 1.05; margin-bottom: 25px; } .hero h1 span { color: #a78bfa; } .hero p { font-size: 20px; color: #cbd5e1; margin-bottom: 35px; } .button { display: inline-block; padding: 14px 28px; border-radius: 30px; background: #8b5cf6; color: white; text-decoration: none; font-weight: bold; transition: 0.3s; } .button:hover { background: #7c3aed; transform: translateY(-3px); } section { padding: 90px 8%; } .about { text-align: center; background: #111827; } .about h2, .services h2 { font-size: 38px; margin-bottom: 20px; } .about p { max-width: 650px; margin: auto; color: #9ca3af; } .services { text-align: center; } .cards { max-width: 1000px; margin: 45px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; } .card { padding: 35px 25px; background: #111827; border: 1px solid #1f2937; border-radius: 18px; transition: 0.3s; } .card:hover { transform: translateY(-8px); border-color: #8b5cf6; } .card .icon { font-size: 40px; margin-bottom: 15px; } .card h3 { margin-bottom: 10px; } .card p { color: #9ca3af; } .contact { text-align: center; background: linear-gradient(135deg, #4c1d95, #1e3a8a); } .contact p { margin-bottom: 25px; color: #ddd; } footer { padding: 25px; text-align: center; color: #6b7280; background: #070b16; } @media (max-width: 700px) { nav { padding: 18px 5%; } nav div:last-child { display: none; } section { padding: 70px 5%; } .cards { grid-template-columns: 1fr; } } </style> </head> <body> <nav> <div class="logo">AURORA</div>
+<div>
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#servicos">Serviços</a>
+  <a href="#contato">Contato</a>
+</div>
+
+</nav> <main>
+<section class="hero" id="inicio">
+  <div class="hero-content">
+    <h1>Ideias que <span>brilham.</span></h1>
+
+    <p>
+      Um pequeno estúdio criativo transformando ideias simples
+      em experiências digitais incríveis.
+    </p>
+
+    <a class="button" href="#servicos">Conheça nosso trabalho</a>
+  </div>
+</section>
+
+<section class="about" id="sobre">
+  <h2>Sobre nós</h2>
+
+  <p>
+    A  Aurora é um projeto fictício criado para demonstrar um site
+    moderno usando apenas HTML e CSS. Simples, rápido e totalmente
+    responsivo.
+  </p>
+</section>
+
+<section class="services" id="servicos">
+  <h2>O que fazemos</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>Design</h3>
+      <p>
+        Criamos interfaces bonitas, modernas e fáceis de usar.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Desenvolvimento</h3>
+      <p>
+        Transformamos ideias em sites rápidos e responsivos.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🚀</div>
+      <h3>Estratégia</h3>
+      <p>
+        Pensamos em soluções para levar seu projeto mais longe.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="contact" id="contato">
+  <h2>Vamos criar algo?</h2>
+
+  <p>
+    Entre em contato e conte sua ideia para nós.
+  </p>
+
+  <a class="button" href="mailto:ola@aurora.com">
+    Falar conosco
+  </a>
+</section>
+
+</main> <footer> © 2026 Aurora. Feito para demonstração. </footer> </body> </html>
