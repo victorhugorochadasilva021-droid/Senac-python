@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato - Verris Company</title>
+
+    <meta name="description"
+        content="Entre em contato com a Verris Company. Estamos prontos para ajudar.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background:
+                radial-gradient(circle at 10% 10%,
+                    rgba(0, 123, 255, 0.12),
+                    transparent 30%),
+                radial-gradient(circle at 90% 30%,
+                    rgba(0, 102, 255, 0.08),
+                    transparent 28%),
+                #f5f7fb;
+
+            color: #111827;
+
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: #05070b;
+
+            color: #ffffff;
+
+            text-align: center;
+
+            padding: 9px 15px;
+
+            font-size: 12px;
+
+            letter-spacing: 1px;
+        }
+
+        .top-bar span {
+            color: #3b9cff;
+
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar {
+            padding: 15px 0;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+
+            border: 2px solid #111827;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+
+            font-weight: 900;
+
+            font-style: italic;
+
+            transform: skew(-8deg);
+
+            margin-right: 10px;
+
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+
+            font-size: 8px;
+
+            font-weight: 600;
+
+            letter-spacing: 4px;
+
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav-link {
+            color: #1f2937 !important;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            margin: 0 8px;
+
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        .header-icons {
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+        }
+
+        .header-icons a {
+            color: #111827;
+
+            font-size: 18px;
+
+            transition: 0.3s;
+        }
+
+        .header-icons a:hover {
+            color: #007bff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .contact-hero {
+            padding: 85px 0 70px;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .contact-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 450px;
+            height: 450px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 123, 255, 0.10);
+
+            filter: blur(30px);
+
+            top: -180px;
+
+            right: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            text-align: center;
+
+            max-width: 780px;
+
+            margin: auto;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            color: #007bff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            font-size: 50px;
+
+            font-weight: 900;
+
+            line-height: 1.05;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: #007bff;
+        }
+
+        .hero-text {
+            color: #6b7280;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            max-width: 650px;
+
+            margin: auto;
+        }
+
+
+        /* =========================
+           CONTACT SECTION
+        ========================= */
+
+        .contact-section {
+            padding: 20px 0 90px;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.84);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+
+            border-radius: 22px;
+
+            padding: 35px;
+
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.06);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+
+        /* =========================
+           CONTACT INFO
+        ========================= */
+
+        .info-title {
+            font-size: 27px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .info-description {
+            color: #6b7280;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 30px;
+        }
+
+        .contact-info-item {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            margin-bottom: 25px;
+        }
+
+        .contact-icon {
+            min-width: 48px;
+            height: 48px;
+
+            border-radius: 13px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: rgba(0, 123, 255, 0.10);
+
+            color: #007bff;
+
+            font-size: 18px;
+        }
+
+        .contact-info-item h4 {
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 5px;
+        }
+
+        .contact-info-item p {
+            color: #6b7280;
+
+            font-size: 13px;
+
+            line-height: 1.5;
+
+            margin: 0;
+        }
+
+        .contact-info-item a {
+            color: #6b7280;
+
+            transition: 0.3s;
+        }
+
+        .contact-info-item a:hover {
+            color: #007bff;
+        }
+
+
+        /* =========================
+           SOCIAL
+        ========================= */
+
+        .social-title {
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            display: flex;
+
+            gap: 10px;
+        }
+
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+
+            border: 1px solid #dce1e8;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #111827;
+
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+
+            border-color: #007bff;
+
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           FORM
+        ========================= */
+
+        .form-title {
+            font-size: 27px;
+
+            font-weight: 800;
+
+            margin-bottom: 25px;
+        }
+
+        .form-label {
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 8px;
+        }
+
+        .form-control,
+        .form-select {
+            min-height: 48px;
+
+            border: 1px solid #dce1e8;
+
+            border-radius: 10px;
+
+            background: #ffffff;
+
+            font-size: 13px;
+
+            padding: 12px 14px;
+
+            box-shadow: none;
+
+            transition: 0.3s;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #007bff;
+
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.10);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+
+            resize: vertical;
+        }
+
+        .send-btn {
+            width: 100%;
+
+            min-height: 50px;
+
+            border: none;
+
+            border-radius: 11px;
+
+            background: #007bff;
+
+            color: white;
+
+            font-size: 14px;
+
+            font-weight: 800;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            transition: 0.3s;
+        }
+
+        .send-btn:hover {
+            background: #0069d9;
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.20);
+        }
+
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq-section {
+            padding: 0 0 90px;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            max-width: 650px;
+
+            margin: 0 auto 40px;
+        }
+
+        .section-label {
+            color: #007bff;
+
+            font-size: 12px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 32px;
+
+            font-weight: 800;
+
+            margin-bottom: 12px;
+        }
+
+        .section-text {
+            color: #6b7280;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin: 0;
+        }
+
+        .faq-card {
+            background: rgba(255, 255, 255, 0.82);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+
+            border-radius: 16px;
+
+            padding: 22px 25px;
+
+            height: 100%;
+
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.04);
+        }
+
+        .faq-card h3 {
+            font-size: 15px;
+
+            font-weight: 800;
+
+            margin-bottom: 8px;
+        }
+
+        .faq-card p {
+            color: #6b7280;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            margin: 0;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #05070b;
+
+            color: white;
+
+            padding: 60px 0 25px;
+
+            border-top: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
+        .footer-logo {
+            font-size: 24px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            max-width: 330px;
+        }
+
+        .footer-title {
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+
+            padding-left: 4px;
+        }
+
+        .footer-contact p {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            color: #007bff;
+
+            width: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #007bff;
+
+            border-color: #007bff;
+
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+            margin-top: 45px;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            color: #6b7280;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .navbar-collapse {
+                padding-top: 15px;
+            }
+
+            .header-icons {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .top-bar {
+                font-size: 10px;
+            }
+
+            .contact-hero {
+                padding: 65px 0;
+            }
+
+            .hero-title {
+                font-size: 34px;
+            }
+
+            .hero-text {
+                font-size: 14px;
+            }
+
+            .contact-card {
+                padding: 25px 20px;
+            }
+
+            .info-title,
+            .form-title {
+                font-size: 24px;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+        FRETE GRÁTIS ACIMA DE <span>R$ 499</span> • PAGAMENTO SEGURO
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg">
+
+                <a href="index.html" class="brand">
+
+                    <div class="logo-icon">
+                        V
+                    </div>
+
+                    <div class="logo-text">
+
+                        <span class="logo-title">
+                            VERRIS
+                        </span>
+
+                        <span class="logo-subtitle">
+                            COMPANY
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav"
+                    aria-controls="mainNav"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="header-icons">
+
+                        <a href="perfil.html" title="Perfil">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <a href="favoritos.html" title="Favoritos">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+
+                        <a href="carrinho.html" title="Carrinho">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </a>
+
+                        <a href="auth/login.html" title="Entrar">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="contact-hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    FALE CONOSCO
+                </span>
+
+                <h1 class="hero-title">
+                    Estamos aqui para
+                    <span>ajudar.</span>
+                </h1>
+
+                <p class="hero-text">
+
+                    Tem alguma dúvida, sugestão ou precisa de ajuda?
+                    Entre em contato com a Verris Company. Nossa equipe
+                    está pronta para atender você.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section class="contact-section">
+
+        <div class="container">
+
+            <div class="contact-card">
+
+                <div class="row g-5">
+
+                    <!-- INFORMAÇÕES -->
+
+                    <div class="col-lg-5">
+
+                        <h2 class="info-title">
+                            Entre em contato
+                        </h2>
+
+                        <p class="info-description">
+
+                            Escolha uma das formas de contato abaixo
+                            ou envie uma mensagem através do formulário.
+                            Será um prazer falar com você.
+
+                        </p>
+
+
+                        <!-- TELEFONE -->
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Telefone
+                                </h4>
+
+                                <p>
+
+                                    <a href="tel:+5524992582209">
+                                        +55 (24) 99258-2209
+                                    </a>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- EMAIL -->
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    E-mail
+                                </h4>
+
+                                <p>
+
+                                    <a href="mailto:victorhugorochadasilva021@gmail.com">
+                                        victorhugorochadasilva021@gmail.com
+                                    </a>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- ATENDIMENTO -->
+
+                        <div class="contact-info-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    Atendimento
+                                </h4>
+
+                                <p>
+                                    Segunda a sexta-feira
+                                    <br>
+                                    09:00 às 18:00
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- REDES SOCIAIS -->
+
+                        <h3 class="social-title">
+                            Acompanhe a Verris
+                        </h3>
+
+                        <div class="social-icons">
+
+                            <a
+                                href="https://github.com/victorhugorochadasilva021-droid/"
+                                target="_blank"
+                                title="GitHub">
+
+                                <i class="fa-brands fa-github"></i>
+
+                            </a>
+
+                            <a
+                                href="https://www.youtube.com/@verriseven"
+                                target="_blank"
+                                title="YouTube">
+
+                                <i class="fa-brands fa-youtube"></i>
+
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/vhrdwhh"
+                                target="_blank"
+                                title="Instagram">
+
+                                <i class="fa-brands fa-instagram"></i>
+
+                            </a>
+
+                            <a
+                                href="https://br.linkedin.com/"
+                                target="_blank"
+                                title="LinkedIn">
+
+                                <i class="fa-brands fa-linkedin-in"></i>
+
+                            </a>
+
+                            <a
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                                title="Facebook">
+
+                                <i class="fa-brands fa-facebook-f"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FORMULÁRIO -->
+
+                    <div class="col-lg-7">
+
+                        <h2 class="form-title">
+                            Envie uma mensagem
+                        </h2>
+
+                        <form>
+
+                            <div class="row g-3">
+
+                                <!-- NOME -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="nome"
+                                        class="form-label">
+
+                                        Nome
+
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        class="form-control"
+                                        id="nome"
+                                        placeholder="Digite seu nome">
+
+                                </div>
+
+
+                                <!-- EMAIL -->
+
+                                <div class="col-md-6">
+
+                                    <label
+                                        for="email"
+                                        class="form-label">
+
+                                        E-mail
+
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="Digite seu e-mail">
+
+                                </div>
+
+
+                                <!-- ASSUNTO -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="assunto"
+                                        class="form-label">
+
+                                        Assunto
+
+                                    </label>
+
+                                    <select
+                                        class="form-select"
+                                        id="assunto">
+
+                                        <option selected>
+                                            Selecione um assunto
+                                        </option>
+
+                                        <option>
+                                            Dúvida sobre produto
+                                        </option>
+
+                                        <option>
+                                            Pedido
+                                        </option>
+
+                                        <option>
+                                            Pagamento
+                                        </option>
+
+                                        <option>
+                                            Entrega
+                                        </option>
+
+                                        <option>
+                                            Sugestão
+                                        </option>
+
+                                        <option>
+                                            Outro assunto
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+
+                                <!-- MENSAGEM -->
+
+                                <div class="col-12">
+
+                                    <label
+                                        for="mensagem"
+                                        class="form-label">
+
+                                        Mensagem
+
+                                    </label>
+
+                                    <textarea
+                                        class="form-control"
+                                        id="mensagem"
+                                        placeholder="Digite sua mensagem..."></textarea>
+
+                                </div>
+
+
+                                <!-- BOTÃO -->
+
+                                <div class="col-12">
+
+                                    <button
+                                        type="submit"
+                                        class="send-btn">
+
+                                        <i class="fa-solid fa-paper-plane"></i>
+
+                                        Enviar mensagem
+
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FAQ
+    ========================== -->
+
+    <section class="faq-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="section-label">
+                    DÚVIDAS FREQUENTES
+                </div>
+
+                <h2 class="section-title">
+                    Como podemos ajudar?
+                </h2>
+
+                <p class="section-text">
+
+                    Algumas respostas rápidas para as dúvidas
+                    mais comuns dos nossos clientes.
+
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-6">
+
+                    <div class="faq-card">
+
+                        <h3>
+                            Como acompanho meu pedido?
+                        </h3>
+
+                        <p>
+
+                            Após a confirmação do pedido, as informações
+                            de acompanhamento serão disponibilizadas
+                            para consulta.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="faq-card">
+
+                        <h3>
+                            Quais formas de pagamento são aceitas?
+                        </h3>
+
+                        <p>
+
+                            A Verris trabalha com diferentes formas de
+                            pagamento para facilitar sua experiência
+                            de compra.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="faq-card">
+
+                        <h3>
+                            Como funciona a entrega?
+                        </h3>
+
+                        <p>
+
+                            Os pedidos são enviados de acordo com a
+                            modalidade de entrega escolhida durante
+                            o processo de compra.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6">
+
+                    <div class="faq-card">
+
+                        <h3>
+                            Preciso de ajuda com um produto?
+                        </h3>
+
+                        <p>
+
+                            Nossa equipe pode ajudar com dúvidas sobre
+                            produtos, pedidos, pagamentos e outros
+                            assuntos relacionados à loja.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- MARCA -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-logo">
+                        VERRIS
+                    </div>
+
+                    <p class="footer-description">
+
+                        A Verris Company reúne estilo, qualidade e
+                        autenticidade para quem busca os melhores
+                        produtos em um só lugar.
+
+                    </p>
+
+
+                    <div class="footer-social">
+
+                        <a
+                            href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a
+                            href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKS RÁPIDOS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="footer-title">
+                        LINKS RÁPIDOS
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre nós
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">
+                                Minha conta
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SUPORTE -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="footer-title">
+                        SUPORTE
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="suporte.html">
+                                Central de suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Privacidade
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="carrinho.html">
+                                Carrinho
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="favoritos.html">
+                                Favoritos
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTATO -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h5 class="footer-title">
+                        CONTATO
+                    </h5>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            +55 (24) 99258-2209
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            victorhugorochadasilva021@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS
+         Usado somente pelo menu responsivo -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

@@ -2,8 +2,7 @@
 <html lang="pt-BR">
 <!-- Inicio do Head-->
 <head>  
-<meta charset="UTF-8">
-     <title>Trabalhe Conosco</title>  
+    <title>Eletronicos do Papagaio - Formulário de Cadastro</title>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <meta name="description" content="Formulário de Cadastro de clientes">
@@ -27,6 +26,7 @@
            border-color: black;            
         }
     </style>
+
 </head>
 <!-- Final do Head-->
 
@@ -54,15 +54,70 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-9">
-                Menu principal
-            </div>
-            <div class="col-3">
-                Login/Logout |
-                Cadastrar 
+        <!-- Navbar - Inicio -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fa-brands fa-rebel"></i>
+            </a>
+            <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            >
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" 
+                            href="index.html">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                            href="produtos.html">
+                            Loja
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" 
+                            href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                </ul>
+
+                <form class="d-flex">
+
+                    <a href="auth/login"
+                        class="btn btn-sm btn-success me-1">
+                        <i class="fa-solid fa-right-to-bracket"></i> Login 
+                    </a>
+                    <a href="auth/logout"
+                        class="btn btn-sm btn-warning me-1">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout 
+                    </a>
+                    <a href="cadastro-bs.html"
+                        class="btn btn-sm btn-primary me-1"
+                        title="Realizar o cadastro">
+                    <i class="fa-solid fa-user-plus"></i>                    
+                    </a>
+                </form>
             </div>
         </div>
+        </nav>
+        <!-- Navbar - Final -->
         
     </header>
 
@@ -83,47 +138,60 @@
                     title="Informe o seu nome completo (campo obrigatório)">
             </div>
 
-
             <div class="m-3">
-            <!-- E-mail de login -->
+                <!-- E-mail de login -->
                 <label class="form-label" for="email">E-mail:</label>
                 <input class="form-control"
                     type="email" id="email" name="email" 
                     required placeholder="exemplo@email.com">
+            </div>   
 
             <div class="m-3">
-            <!-- Estado -->
-                <label for="estado" class="form-label for=Estado">Estado (UF):</label>
-                <select class="form-select" id="estado" name="estado" required>
-                    <option value="" disabled selected>Selecione...</option>
-                    <option value="AC">AC - Acre</option>
-                    <option value="AL">AL - Alagoas</option>
-                    <option value="AP">AP - Amapá</option>
-                    <option value="AM">AM - Amazonas</option>
-                    <option value="BA">BA - Bahia</option>
-                    <option value="CE">CE - Ceará</option>
-                    <option value="DF">DF - Distrito Federal</option>
-                    <option value="ES">ES - Espírito Santo</option>
-                    <option value="GO">GO - Goiás</option>
-                    <option value="MA">MA - Maranhão</option>
-                    <option value="MT">MT - Mato Grosso</option>
-                    <option value="MS">MS - Mato Grosso do Sul</option>
-                    <option value="MG">MG - Minas Gerais</option>
-                    <option value="PA">PA - Pará</option>
-                    <option value="PB">PB - Paraíba</option>
-                    <option value="PR">PR - Paraná</option>
-                    <option value="PE">PE - Pernambuco</option>
-                    <option value="PI">PI - Piauí</option>
-                    <option value="RJ">RJ - Rio de Janeiro</option>
-                    <option value="RN">RN - Rio Grande do Norte</option>
-                    <option value="RS">RS - Rio Grande do Sul</option>
-                    <option value="RO">RO - Rondônia</option>
-                    <option value="RR">RR - Roraima</option>
-                    <option value="SC">SC - Santa Catarina</option>
-                    <option value="SP">SP - São Paulo</option>
-                    <option value="SE">SE - Sergipe</option>
-                    <option value="TO">TO - Tocantins</option>
+                <!-- Estado -->
+                <label class="form-label" for="estado">Estado:</label>
+                <select class="form-select" id="estado" name="estado">
+                    <option value="" selected disabled>Selecione um dos estados</option>
+
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
                 </select>
+            </div>
+
+            
+            <div class="m-3">
+                <!-- Curriculo -->
+                <label class="form-label" for="cv">Curriculo:</label>
+                <input class="form-control"
+                    type="file" id="cv" name="cv" 
+                    required>
+            </div> 
+            
+
             <!-- Botões -->
             <div class="m-3 row">
                 <div class="col-6">
@@ -152,7 +220,7 @@
         [-] Redes Sociais
     -->
     <footer class="adicionar_borda">
-        <div class="row">
+        <div class="row m-3">
             <div class="col-4">
                 Menu Secundário
             </div>
@@ -166,21 +234,40 @@
                 Redes Sociais - Github, Youtube, Instagran, 
                                 Linkedin, Facebook                
             -->
-        <div class="col-3 d-flex gap-3">
-            <a href="https://github.com/victorhugorochadasilva021-droid" target="_blank" rel="noopener noreferrer" class="fs-4" title="GitHub">
-                <i class="fa-brands fa-github"></i>
-            </a>
+            <div class="col-3 text-end">
+                
+                <a href="https://github.com/victorhugorochadasilva021-droid/" 
+                   target="_blank" title="Acesse nosso GitHub"
+                   class="btn btn-sm btn btn-outline-dark">
+                    <i class="fa-brands fa-github"></i>
+                </a>
 
-            <a href="https://instagram.com/vhrdwhh" target="_blank" rel="noopener noreferrer" class="fs-4" title="Instagram">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
+                <a href="https://www.youtube.com/@verriseven" 
+                   target="_blank" title="Acesse canal no Youtube"
+                   class="btn btn-sm btn btn-outline-dark">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
 
-            <a href="https://www.youtube.com/@verriseven" target="_blank" rel="noopener noreferrer" class="fs-4" title="YouTube">
-                <i class="fa-brands fa-youtube"></i>
-            </a>
-</div>
-            
+                <a href="https://www.instagram.com/vhrdwhh" 
+                   target="_blank" title="Acesse o nosso Instagram"
+                   class="btn btn-sm btn btn-outline-dark">
+                    <i class="fa-brands fa-square-instagram"></i>
+                </a>
+
+                <a href="https://br.linkedin.com/" 
+                   target="_blank" title="Acesse o nosso Linkedin"
+                   class="btn btn-sm btn btn-outline-dark">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+
+                <a href="https://www.facebook.com/" 
+                   target="_blank" title="Acesse o nosso Facebook"
+                   class="btn btn-sm btn btn-outline-dark">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+
             </div>
+        </div>
     </footer>
 </div> 
 <!-- Final da Div Principal-->   

@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Suporte - Verris Company</title>
+
+    <meta name="description" content="Central de suporte da Verris Company. Encontre respostas e entre em contato com nossa equipe.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(0, 119, 255, 0.12), transparent 30%),
+                radial-gradient(circle at 85% 25%, rgba(0, 174, 255, 0.10), transparent 30%),
+                #f4f8fc;
+            color: #111827;
+        }
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================= */
+
+        .promo-bar {
+            background: #0b1f3a;
+            color: white;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .header-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 15px 20px;
+        }
+
+        .logo-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+            transform: skew(-8deg);
+            margin-right: 10px;
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #374151;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 7px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #0077ff;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 17px;
+        }
+
+        .header-icons a {
+            color: #111827;
+            font-size: 18px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .header-icons a:hover {
+            color: #0077ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .support-hero {
+            max-width: 1200px;
+            margin: 70px auto 45px;
+            padding: 70px 30px;
+            text-align: center;
+            border-radius: 30px;
+            background:
+                linear-gradient(135deg, rgba(0, 119, 255, 0.96), rgba(0, 71, 160, 0.96));
+            color: white;
+            box-shadow: 0 25px 70px rgba(0, 75, 160, 0.22);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .support-hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            top: -180px;
+            right: -80px;
+        }
+
+        .support-hero::after {
+            content: "";
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.06);
+            bottom: -140px;
+            left: -70px;
+        }
+
+        .support-icon {
+            position: relative;
+            z-index: 1;
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 25px;
+            border-radius: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            font-size: 32px;
+        }
+
+        .support-hero h1 {
+            position: relative;
+            z-index: 1;
+            font-size: clamp(32px, 5vw, 52px);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .support-hero p {
+            position: relative;
+            z-index: 1;
+            max-width: 650px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* =========================
+           CONTAINER
+        ========================= */
+
+        .content-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: #0077ff;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+            margin-top: 8px;
+            font-size: 34px;
+            font-weight: 800;
+            color: #111827;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: 12px auto 0;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* =========================
+           CARDS DE SUPORTE
+        ========================= */
+
+        .support-card {
+            height: 100%;
+            padding: 30px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.72);
+            border: 1px solid rgba(0, 0, 0, 0.07);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: 0.3s;
+        }
+
+        .support-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0, 94, 200, 0.12);
+            border-color: rgba(0, 119, 255, 0.25);
+        }
+
+        .support-card-icon {
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 16px;
+            background: #e7f2ff;
+            color: #0077ff;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .support-card h3 {
+            font-size: 20px;
+            font-weight: 750;
+            margin-bottom: 10px;
+        }
+
+        .support-card p {
+            color: #6b7280;
+            line-height: 1.6;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .support-card a {
+            color: #0077ff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .support-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           FAQ
+        ========================= */
+
+        .faq-section {
+            margin: 90px 0;
+        }
+
+        .accordion {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .accordion-item {
+            border: none;
+            margin-bottom: 12px;
+            border-radius: 15px !important;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .accordion-button {
+            padding: 21px 24px;
+            font-weight: 700;
+            color: #111827;
+            background: rgba(255, 255, 255, 0.85);
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #0077ff;
+            background: #edf6ff;
+        }
+
+        .accordion-body {
+            color: #6b7280;
+            line-height: 1.7;
+            padding: 0 24px 23px;
+            background: #edf6ff;
+        }
+
+        /* =========================
+           CONTATO
+        ========================= */
+
+        .contact-support {
+            margin-bottom: 90px;
+            padding: 45px;
+            border-radius: 25px;
+            background: #101827;
+            color: white;
+            text-align: center;
+            box-shadow: 0 20px 55px rgba(0, 0, 0, 0.14);
+        }
+
+        .contact-support h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .contact-support p {
+            color: #cbd5e1;
+            max-width: 650px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+        }
+
+        .btn-support {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            background: #0077ff;
+            color: white;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .btn-support:hover {
+            background: #0066db;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1220;
+            color: #dbe4ef;
+            padding: 60px 0 25px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .footer-text {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 9px;
+        }
+
+        .footer-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #38a5ff;
+            padding-left: 3px;
+        }
+
+        .footer-contact a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .footer-contact a:hover {
+            color: #38a5ff;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #172235;
+            color: #dbe4ef;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            background: #0077ff;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 45px;
+            padding-top: 22px;
+            text-align: center;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .header-icons {
+                margin-top: 15px;
+                justify-content: center;
+            }
+
+            .support-hero {
+                margin: 40px 20px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .support-hero {
+                padding: 55px 22px;
+                border-radius: 22px;
+            }
+
+            .support-hero h1 {
+                font-size: 34px;
+            }
+
+            .support-hero p {
+                font-size: 15px;
+            }
+
+            .section-title h2 {
+                font-size: 28px;
+            }
+
+            .contact-support {
+                padding: 35px 22px;
+            }
+
+            .contact-support h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE PROMOÇÃO
+    ========================= -->
+
+    <div class="promo-bar">
+        Frete grátis nas compras acima de R$ 499
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="main-header">
+
+        <div class="header-container">
+
+            <nav class="navbar navbar-expand-lg p-0">
+
+                <div class="container-fluid p-0">
+
+                    <a href="index.html" class="logo-link">
+
+                        <div class="logo-icon">
+                            V
+                        </div>
+
+                        <div class="logo-text">
+
+                            <span class="logo-title">
+                                VERRIS
+                            </span>
+
+                            <span class="logo-subtitle">
+                                COMPANY
+                            </span>
+
+                        </div>
+
+                    </a>
+
+
+                    <button
+                        class="navbar-toggler border-0"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Abrir menu">
+
+                        <span class="navbar-toggler-icon"></span>
+
+                    </button>
+
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav mx-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">
+                                    Início
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="produtos-list.html">
+                                    Produtos
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="promocoes.html">
+                                    Promoções
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html">
+                                    Sobre
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="blog.html">
+                                    Blog
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                        <div class="header-icons">
+
+                            <a href="perfil.html" title="Perfil">
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+
+                            <a href="favoritos.html" title="Favoritos">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <a href="carrinho.html" title="Carrinho">
+                                <i class="fa-solid fa-bag-shopping"></i>
+                            </a>
+
+                            <a href="auth/login.html" title="Entrar">
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <main>
+
+        <section class="support-hero">
+
+            <div class="support-icon">
+                <i class="fa-solid fa-headset"></i>
+            </div>
+
+            <h1>
+                Como podemos ajudar?
+            </h1>
+
+            <p>
+                Encontre respostas para suas dúvidas ou entre em contato
+                com a equipe Verris. Estamos aqui para tornar sua experiência
+                ainda melhor.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             OPÇÕES DE SUPORTE
+        ========================= -->
+
+        <section class="content-container">
+
+            <div class="section-title">
+
+                <span>
+                    Central de ajuda
+                </span>
+
+                <h2>
+                    Encontre o que precisa
+                </h2>
+
+                <p>
+                    Acesse rapidamente as principais áreas de suporte
+                    da Verris Company.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <!-- Pedido -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-box"></i>
+                        </div>
+
+                        <h3>
+                            Meu pedido
+                        </h3>
+
+                        <p>
+                            Precisa acompanhar seu pedido ou entender
+                            alguma informação sobre sua compra?
+                        </p>
+
+                        <a href="contato.html">
+                            Ver opções
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Pagamento -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <h3>
+                            Pagamento
+                        </h3>
+
+                        <p>
+                            Dúvidas sobre formas de pagamento, aprovação
+                            ou informações relacionadas à compra.
+                        </p>
+
+                        <a href="contato.html">
+                            Ver opções
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Troca -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-rotate"></i>
+                        </div>
+
+                        <h3>
+                            Trocas e devoluções
+                        </h3>
+
+                        <p>
+                            Consulte informações sobre trocas, devoluções
+                            e atendimento relacionado aos produtos.
+                        </p>
+
+                        <a href="contato.html">
+                            Saber mais
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Produtos -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                        </div>
+
+                        <h3>
+                            Produtos
+                        </h3>
+
+                        <p>
+                            Quer saber mais sobre um produto, tamanho,
+                            disponibilidade ou características?
+                        </p>
+
+                        <a href="produtos-list.html">
+                            Ver produtos
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Conta -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <h3>
+                            Minha conta
+                        </h3>
+
+                        <p>
+                            Acesse sua conta ou confira as opções
+                            disponíveis para seu perfil.
+                        </p>
+
+                        <a href="perfil.html">
+                            Acessar perfil
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Atendimento -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="support-card">
+
+                        <div class="support-card-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+
+                        <h3>
+                            Fale conosco
+                        </h3>
+
+                        <p>
+                            Não encontrou o que procurava? Nossa equipe
+                            está pronta para ajudar.
+                        </p>
+
+                        <a href="contato.html">
+                            Entrar em contato
+                            <i class="fa-solid fa-arrow-right ms-1"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FAQ
+        ========================= -->
+
+        <section class="faq-section">
+
+            <div class="content-container">
+
+                <div class="section-title">
+
+                    <span>
+                        Perguntas frequentes
+                    </span>
+
+                    <h2>
+                        Dúvidas frequentes
+                    </h2>
+
+                    <p>
+                        Confira algumas das perguntas mais comuns
+                        sobre a Verris Company.
+                    </p>
+
+                </div>
+
+
+                <div class="accordion" id="faqAccordion">
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq1">
+
+                                Como entro em contato com a Verris?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faq1"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Você pode entrar em contato através da nossa
+                                página de contato, pelo telefone ou pelo
+                                e-mail oficial da Verris Company.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq2">
+
+                                Como acompanho meu pedido?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faq2"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Para informações sobre pedidos, entre em
+                                contato com nossa equipe de atendimento
+                                informando os dados da compra.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq3">
+
+                                Posso trocar um produto?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faq3"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Sim. Para informações sobre trocas e
+                                devoluções, entre em contato com nossa
+                                equipe através da página de contato.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq4">
+
+                                Quais formas de pagamento são aceitas?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faq4"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                As formas de pagamento disponíveis podem
+                                variar. Para consultar informações
+                                atualizadas, entre em contato com a equipe
+                                Verris.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faq5">
+
+                                Como encontro um produto específico?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faq5"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Você pode acessar a página de produtos e
+                                navegar pelas opções disponíveis na
+                                coleção Verris.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTATO
+        ========================= -->
+
+        <section class="content-container">
+
+            <div class="contact-support">
+
+                <h2>
+                    Ainda precisa de ajuda?
+                </h2>
+
+                <p>
+                    Nossa equipe está pronta para atender você.
+                    Envie sua dúvida e entraremos em contato.
+                </p>
+
+                <a href="contato.html" class="btn-support">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    Fale conosco
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="row g-5">
+
+                <!-- Sobre -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-title">
+                        VERRIS
+                    </div>
+
+                    <p class="footer-text">
+                        A Verris Company busca oferecer uma experiência
+                        moderna para quem acompanha o universo dos
+                        sneakers, combinando estilo, tecnologia e
+                        praticidade.
+                    </p>
+
+                    <div class="social-icons">
+
+                        <a
+                            href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a
+                            href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Links rápidos -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <div class="footer-title">
+                        Links rápidos
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre nós
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">
+                                Meu perfil
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Suporte -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <div class="footer-title">
+                        Suporte
+                    </div>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="suporte.html">
+                                Central de suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Privacidade
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                Atendimento
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- Contato -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-title">
+                        Contato
+                    </div>
+
+                    <div class="footer-text footer-contact">
+
+                        <p>
+                            <i class="fa-solid fa-phone me-2"></i>
+
+                            <a href="tel:+5524992582209">
+                                +55 (24) 99258-2209
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope me-2"></i>
+
+                            <a href="mailto:victorhugorochadasilva021@gmail.com">
+                                victorhugorochadasilva021@gmail.com
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-clock me-2"></i>
+
+                            Atendimento:
+                            segunda a sexta, das 9h às 18h
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho - Verris Company</title>
+
+    <meta name="description" content="Seu carrinho de compras na Verris Company.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(0, 123, 255, 0.12), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(0, 123, 255, 0.08), transparent 30%),
+                #f4f7fb;
+            color: #111827;
+        }
+
+        /* =========================
+           BARRA SUPERIOR
+        ========================= */
+
+        .top-bar {
+            background: #0b0f19;
+            color: white;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .navbar {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+            transform: skew(-8deg);
+            margin-right: 10px;
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #111827;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 7px;
+            transition: 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #006eff;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icons a {
+            color: #111827;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .header-icons a:hover {
+            color: #006eff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .page-hero {
+            padding: 70px 20px 55px;
+            text-align: center;
+            background:
+                linear-gradient(135deg, rgba(0, 110, 255, 0.10), rgba(255, 255, 255, 0.7));
+            border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+        }
+
+        .page-hero span {
+            color: #006eff;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .page-hero h1 {
+            font-size: clamp(38px, 6vw, 64px);
+            font-weight: 900;
+            margin: 12px 0;
+            letter-spacing: -2px;
+        }
+
+        .page-hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        /* =========================
+           CARRINHO
+        ========================= */
+
+        .cart-section {
+            padding: 70px 0;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.07);
+        }
+
+        .cart-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+            padding: 22px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .product-image {
+            width: 125px;
+            height: 125px;
+            background: #f1f5f9;
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h3 {
+            font-size: 19px;
+            font-weight: 800;
+            margin-bottom: 7px;
+        }
+
+        .product-info p {
+            margin: 3px 0;
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .product-price {
+            font-size: 20px;
+            font-weight: 800;
+            margin-top: 12px;
+        }
+
+        .quantity-box {
+            display: flex;
+            align-items: center;
+            border: 1px solid #d1d5db;
+            border-radius: 10px;
+            overflow: hidden;
+            width: fit-content;
+        }
+
+        .quantity-box button {
+            border: none;
+            background: white;
+            width: 35px;
+            height: 35px;
+            font-size: 17px;
+            cursor: pointer;
+            color: #111827;
+        }
+
+        .quantity-box span {
+            width: 35px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .remove-btn {
+            color: #6b7280;
+            font-size: 18px;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .remove-btn:hover {
+            color: #dc2626;
+        }
+
+        /* =========================
+           RESUMO
+        ========================= */
+
+        .summary-card {
+            padding: 28px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .summary-card h2 {
+            font-size: 23px;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            color: #4b5563;
+            font-size: 15px;
+        }
+
+        .summary-line strong {
+            color: #111827;
+        }
+
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            margin-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .checkout-btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            border-radius: 13px;
+            background: #006eff;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 800;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background: #0055cc;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .continue-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border-radius: 13px;
+            border: 1px solid #d1d5db;
+            background: white;
+            color: #111827;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 12px;
+            transition: 0.3s;
+        }
+
+        .continue-btn:hover {
+            border-color: #006eff;
+            color: #006eff;
+        }
+
+        .secure-info {
+            margin-top: 22px;
+            padding: 15px;
+            background: #f0f7ff;
+            border-radius: 14px;
+            color: #374151;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .secure-info i {
+            color: #006eff;
+            margin-right: 7px;
+        }
+
+        /* =========================
+           BENEFÍCIOS
+        ========================= */
+
+        .benefits {
+            padding: 0 0 70px;
+        }
+
+        .benefit-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid #e5e7eb;
+            height: 100%;
+        }
+
+        .benefit-card i {
+            font-size: 27px;
+            color: #006eff;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h4 {
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .benefit-card p {
+            color: #6b7280;
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #080b12;
+            color: white;
+            padding: 60px 0 25px;
+            margin-top: 20px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .footer-logo .logo-icon {
+            border-color: white;
+            color: white;
+        }
+
+        .footer-logo .logo-title {
+            color: white;
+        }
+
+        .footer-logo .logo-subtitle {
+            color: #9ca3af;
+        }
+
+        footer p {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        footer h5 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer ul li a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        footer ul li a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #006eff;
+            border-color: #006eff;
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1f2937;
+            margin-top: 45px;
+            padding-top: 22px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 991px) {
+            .header-icons {
+                margin-top: 15px;
+                justify-content: center;
+            }
+
+            .summary-card {
+                position: static;
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .page-hero {
+                padding: 50px 20px 40px;
+            }
+
+            .cart-section {
+                padding: 45px 15px;
+            }
+
+            .cart-item {
+                flex-wrap: wrap;
+            }
+
+            .product-image {
+                width: 100px;
+                height: 100px;
+            }
+
+            .product-info {
+                min-width: calc(100% - 125px);
+            }
+
+            .quantity-box {
+                margin-left: 122px;
+            }
+
+            .remove-btn {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cart-item {
+                display: grid;
+                grid-template-columns: 90px 1fr;
+            }
+
+            .product-image {
+                width: 90px;
+                height: 90px;
+            }
+
+            .product-info {
+                min-width: 0;
+            }
+
+            .product-info h3 {
+                font-size: 16px;
+            }
+
+            .quantity-box {
+                margin-left: 0;
+            }
+
+            .remove-btn {
+                grid-column: 2;
+                justify-self: end;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- BARRA PROMOCIONAL -->
+    <div class="top-bar">
+        Frete grátis para compras acima de R$ 399
+    </div>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container py-3">
+
+            <a href="index.html" class="navbar-brand">
+
+                <div class="logo-icon">
+                    V
+                </div>
+
+                <div class="logo-text">
+                    <span class="logo-title">VERRIS</span>
+                    <span class="logo-subtitle">COMPANY</span>
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarVerris"
+                aria-controls="navbarVerris"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarVerris">
+
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos-list.html">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="promocoes.html">
+                            Promoções
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html">
+                            Sobre
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">
+                            Blog
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="header-icons">
+
+                    <a href="perfil.html" title="Perfil">
+                        <i class="bi bi-person"></i>
+                    </a>
+
+                    <a href="favoritos.html" title="Favoritos">
+                        <i class="bi bi-heart"></i>
+                    </a>
+
+                    <a href="carrinho.html" title="Carrinho" class="text-primary">
+                        <i class="bi bi-bag"></i>
+                    </a>
+
+                    <a href="auth/login.html" title="Login">
+                        <i class="bi bi-box-arrow-in-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="page-hero">
+
+        <span>Seu pedido</span>
+
+        <h1>Seu carrinho.</h1>
+
+        <p>
+            Confira os produtos selecionados e prepare-se para garantir
+            seu próximo par.
+        </p>
+
+    </section>
+
+    <!-- CARRINHO -->
+    <section class="cart-section">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- PRODUTOS -->
+                <div class="col-lg-8">
+
+                    <div class="glass-card">
+
+                        <div class="p-4 pb-2">
+                            <h2 class="cart-title">
+                                Produtos no carrinho
+                            </h2>
+                        </div>
+
+                        <!-- PRODUTO 1 -->
+                        <div class="cart-item">
+
+                            <div class="product-image">
+                                <img
+                                    src="https://imgnike-a.akamaihd.net/768x768/118467IEA1.jpg"
+                                    alt="Air Jordan 5 OG Black Metallic">
+                            </div>
+
+                            <div class="product-info">
+
+                                <h3>
+                                    Air Jordan 5 OG Black Metallic
+                                </h3>
+
+                                <p>
+                                    Tamanho: 40
+                                </p>
+
+                                <p>
+                                    Cor: Black / Metallic Silver
+                                </p>
+
+                                <div class="product-price">
+                                    R$ 1.299,90
+                                </div>
+
+                            </div>
+
+                            <div class="quantity-box">
+
+                                <button type="button">
+                                    −
+                                </button>
+
+                                <span>
+                                    1
+                                </span>
+
+                                <button type="button">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <a href="#" class="remove-btn" title="Remover produto">
+                                <i class="bi bi-trash"></i>
+                            </a>
+
+                        </div>
+
+                        <!-- PRODUTO 2 -->
+                        <div class="cart-item">
+
+                            <div class="product-image">
+                                <img
+                                    src="https://imgnike-a.akamaihd.net/768x768/02568815A11.jpg"
+                                    alt="Air Jordan 5 Retro UNC">
+                            </div>
+
+                            <div class="product-info">
+
+                                <h3>
+                                    Air Jordan 5 Retro UNC
+                                </h3>
+
+                                <p>
+                                    Tamanho: 41
+                                </p>
+
+                                <p>
+                                    Cor: University Blue
+                                </p>
+
+                                <div class="product-price">
+                                    R$ 1.199,90
+                                </div>
+
+                            </div>
+
+                            <div class="quantity-box">
+
+                                <button type="button">
+                                    −
+                                </button>
+
+                                <span>
+                                    1
+                                </span>
+
+                                <button type="button">
+                                    +
+                                </button>
+
+                            </div>
+
+                            <a href="#" class="remove-btn" title="Remover produto">
+                                <i class="bi bi-trash"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- RESUMO -->
+                <div class="col-lg-4">
+
+                    <div class="glass-card summary-card">
+
+                        <h2>
+                            Resumo do pedido
+                        </h2>
+
+                        <div class="summary-line">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong>
+                                R$ 2.499,80
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-line">
+
+                            <span>
+                                Frete
+                            </span>
+
+                            <strong>
+                                Grátis
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-line">
+
+                            <span>
+                                Desconto
+                            </span>
+
+                            <strong>
+                                R$ 0,00
+                            </strong>
+
+                        </div>
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <span>
+                                R$ 2.499,80
+                            </span>
+
+                        </div>
+
+                        <a href="#" class="checkout-btn">
+                            Finalizar compra
+                        </a>
+
+                        <a href="produtos-list.html" class="continue-btn">
+                            Continuar comprando
+                        </a>
+
+                        <div class="secure-info">
+
+                            <i class="bi bi-shield-check"></i>
+
+                            Compra segura. Seus dados serão protegidos
+                            durante todo o processo de compra.
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section class="benefits">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <i class="bi bi-truck"></i>
+
+                        <h4>
+                            Envio rápido
+                        </h4>
+
+                        <p>
+                            Enviamos seu pedido com segurança e agilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <i class="bi bi-shield-check"></i>
+
+                        <h4>
+                            Compra segura
+                        </h4>
+
+                        <p>
+                            Seus dados são tratados com segurança.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                        <h4>
+                            Troca facilitada
+                        </h4>
+
+                        <p>
+                            Conte com nosso suporte quando precisar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- SOBRE -->
+                <div class="col-lg-4">
+
+                    <div class="footer-logo">
+
+                        <div class="logo-icon">
+                            V
+                        </div>
+
+                        <div class="logo-text">
+
+                            <span class="logo-title">
+                                VERRIS
+                            </span>
+
+                            <span class="logo-subtitle">
+                                COMPANY
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <p>
+                        Sneakers, estilo e autenticidade.
+                        A Verris Company busca oferecer uma experiência
+                        moderna para quem vive a cultura dos sneakers.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fab fa-github"></i>
+
+                        </a>
+
+                        <a href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fab fa-youtube"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fab fa-instagram"></i>
+
+                        </a>
+
+                        <a href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fab fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fab fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LINKS RÁPIDOS -->
+                <div class="col-lg-2 col-md-4">
+
+                    <h5>
+                        Links rápidos
+                    </h5>
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre nós
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- ATENDIMENTO -->
+                <div class="col-lg-3 col-md-4">
+
+                    <h5>
+                        Atendimento
+                    </h5>
+
+                    <ul>
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="suporte.html">
+                                Suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">
+                                Minha conta
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- INFORMAÇÕES -->
+                <div class="col-lg-3 col-md-4">
+
+                    <h5>
+                        Informações
+                    </h5>
+
+                    <ul>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Política de privacidade
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                Contato
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <p class="mt-3 mb-1">
+                        <i class="bi bi-telephone"></i>
+                        +55 (24) 99258-2209
+                    </p>
+
+                    <p>
+                        <i class="bi bi-envelope"></i>
+                        victorhugorochadasilva021@gmail.com
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

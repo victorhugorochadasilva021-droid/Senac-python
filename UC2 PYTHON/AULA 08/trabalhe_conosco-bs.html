@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trabalhe Conosco - Verris Company</title>
+
+    <meta name="description"
+        content="Faça parte da equipe Verris Company. Confira nossas oportunidades e envie seu currículo.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(0, 102, 255, 0.13), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(0, 153, 255, 0.10), transparent 30%),
+                #f5f7fb;
+            color: #111827;
+        }
+
+        /* =========================
+           BARRA DE PROMOÇÃO
+        ========================= */
+
+        .promo-bar {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+
+        .promo-bar span {
+            color: #60a5fa;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+        }
+
+        .navbar {
+            min-height: 76px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+            transform: skew(-8deg);
+            margin-right: 10px;
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 5px;
+            transition: 0.25s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #0066ff;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: 0.25s;
+        }
+
+        .header-icon:hover {
+            background: #eef5ff;
+            color: #0066ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 95px 0 75px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(0, 102, 255, 0.12);
+            border-radius: 50%;
+            filter: blur(80px);
+            top: -120px;
+            right: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #e8f2ff;
+            color: #0066ff;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            font-weight: 900;
+            letter-spacing: -3px;
+            margin-bottom: 20px;
+            line-height: 1.02;
+        }
+
+        .hero h1 span {
+            color: #0066ff;
+        }
+
+        .hero p {
+            color: #6b7280;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 680px;
+            margin: auto;
+        }
+
+        /* =========================
+           CONTEÚDO
+        ========================= */
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+            max-width: 650px;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.76);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            box-shadow: 0 15px 45px rgba(15, 23, 42, 0.08);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-radius: 24px;
+        }
+
+        .benefit-card {
+            height: 100%;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+        }
+
+        .benefit-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e8f2ff;
+            color: #0066ff;
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+
+        .benefit-card h3 {
+            font-size: 19px;
+            font-weight: 750;
+            margin-bottom: 10px;
+        }
+
+        .benefit-card p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* =========================
+           VAGAS
+        ========================= */
+
+        .job-card {
+            padding: 28px;
+            margin-bottom: 18px;
+            transition: 0.3s;
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.11);
+        }
+
+        .job-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 15px;
+            background: #111827;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            flex-shrink: 0;
+        }
+
+        .job-card h3 {
+            font-size: 19px;
+            font-weight: 750;
+            margin: 0 0 7px;
+        }
+
+        .job-card p {
+            color: #6b7280;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .job-tag {
+            display: inline-block;
+            background: #e8f2ff;
+            color: #0066ff;
+            border-radius: 50px;
+            padding: 6px 11px;
+            font-size: 11px;
+            font-weight: 700;
+            margin-right: 5px;
+            margin-top: 10px;
+        }
+
+        .btn-vagas {
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 11px 18px;
+            font-weight: 700;
+            font-size: 13px;
+            text-decoration: none;
+            transition: 0.25s;
+            white-space: nowrap;
+        }
+
+        .btn-vagas:hover {
+            background: #0052cc;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FORMULÁRIO
+        ========================= */
+
+        .form-card {
+            padding: 35px;
+        }
+
+        .form-label {
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .form-control,
+        .form-select {
+            border: 1px solid #dbe2ea;
+            border-radius: 12px;
+            padding: 13px 15px;
+            background: rgba(255, 255, 255, 0.85);
+            font-size: 14px;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #0066ff;
+            box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.10);
+        }
+
+        textarea.form-control {
+            min-height: 145px;
+            resize: vertical;
+        }
+
+        .btn-enviar {
+            width: 100%;
+            background: #0066ff;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 14px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .btn-enviar:hover {
+            background: #0052cc;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           CTA
+        ========================= */
+
+        .cta {
+            background: #111827;
+            color: white;
+            border-radius: 28px;
+            padding: 55px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 102, 255, 0.25);
+            border-radius: 50%;
+            filter: blur(70px);
+            right: -100px;
+            top: -120px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta h2 {
+            font-size: 35px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .cta p {
+            color: #9ca3af;
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background: white;
+            color: #111827;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 12px;
+            font-weight: 800;
+            transition: 0.25s;
+        }
+
+        .btn-cta:hover {
+            background: #e8f2ff;
+            color: #0066ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1120;
+            color: white;
+            margin-top: 70px;
+            padding: 60px 0 25px;
+        }
+
+        .footer-logo .logo-title {
+            color: white;
+        }
+
+        .footer-logo .logo-icon {
+            border-color: white;
+            color: white;
+        }
+
+        .footer-logo .logo-subtitle {
+            color: #9ca3af;
+        }
+
+        .footer-text {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 330px;
+        }
+
+        footer h5 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 3px;
+        }
+
+        .footer-contact {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            color: #60a5fa;
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .social-links a {
+            width: 37px;
+            height: 37px;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d1d5db;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .social-links a:hover {
+            background: #0066ff;
+            border-color: #0066ff;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1f2937;
+            margin-top: 45px;
+            padding-top: 22px;
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 991px) {
+            .header-icons {
+                margin-top: 15px;
+            }
+
+            .hero {
+                padding: 70px 0 55px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .cta {
+                padding: 40px 30px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .job-card {
+                padding: 22px;
+            }
+
+            .job-card .d-flex {
+                align-items: flex-start !important;
+            }
+
+            .btn-vagas {
+                margin-top: 15px;
+            }
+
+            .form-card {
+                padding: 25px;
+            }
+
+            .cta h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         BARRA DE PROMOÇÃO
+    ========================= -->
+
+    <div class="promo-bar">
+        🚀 <span>Frete grátis</span> em compras acima de R$ 499
+    </div>
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+
+                <!-- LOGO -->
+                <a href="index.html" class="logo">
+
+                    <div class="logo-icon">
+                        V
+                    </div>
+
+                    <div class="logo-text">
+                        <span class="logo-title">VERRIS</span>
+                        <span class="logo-subtitle">COMPANY</span>
+                    </div>
+
+                </a>
+
+                <!-- BOTÃO MOBILE -->
+                <button class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarVerris"
+                    aria-controls="navbarVerris"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <i class="bi bi-list fs-2"></i>
+
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse" id="navbarVerris">
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                    <!-- ÍCONES -->
+                    <div class="header-icons">
+
+                        <a href="perfil.html"
+                            class="header-icon"
+                            title="Perfil">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </a>
+
+                        <a href="favoritos.html"
+                            class="header-icon"
+                            title="Favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </a>
+
+                        <a href="carrinho.html"
+                            class="header-icon"
+                            title="Carrinho">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </a>
+
+                        <a href="auth/login.html"
+                            class="header-icon"
+                            title="Entrar">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    Faça parte da Verris
+                </span>
+
+                <h1>
+                    Seu próximo passo começa <span>aqui.</span>
+                </h1>
+
+                <p>
+                    Na Verris, acreditamos que grandes ideias nascem de pessoas
+                    apaixonadas pelo que fazem. Venha fazer parte de uma equipe
+                    que está construindo algo novo no universo da moda e dos sneakers.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         POR QUE TRABALHAR CONOSCO
+    ========================= -->
+
+    <section class="section pt-0">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Por que trabalhar com a gente?
+                </h2>
+
+                <p class="section-subtitle mx-auto">
+                    Queremos criar um ambiente onde criatividade, tecnologia e
+                    colaboração façam parte da rotina.
+                </p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- CARD -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="glass-card benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-lightbulb-fill"></i>
+                        </div>
+
+                        <h3>
+                            Inovação
+                        </h3>
+
+                        <p>
+                            Buscamos novas ideias e soluções para transformar
+                            constantemente a experiência dos nossos clientes.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="glass-card benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+
+                        <h3>
+                            Equipe
+                        </h3>
+
+                        <p>
+                            Trabalhamos juntos, compartilhando conhecimento e
+                            ajudando uns aos outros a crescer.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="glass-card benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-chevron-double-up"></i>
+                            
+                        </div>
+
+                        <h3>
+                            Crescimento
+                        </h3>
+
+                        <p>
+                            Valorizamos o desenvolvimento profissional e novas
+                            oportunidades dentro da empresa.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD -->
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="glass-card benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+
+                        <h3>
+                            Ambiente
+                        </h3>
+
+                        <p>
+                            Um espaço moderno, colaborativo e aberto para
+                            pessoas que gostam de criar e experimentar.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         VAGAS
+    ========================= -->
+
+    <section class="section bg-white">
+
+        <div class="container">
+
+            <div class="row align-items-end mb-5">
+
+                <div class="col-lg-8">
+
+                    <h2 class="section-title">
+                        Oportunidades
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Confira algumas das áreas em que você pode fazer parte
+                        da Verris Company.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+
+                    <span class="text-muted small">
+                        Novas oportunidades podem surgir em breve.
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- VAGA 1 -->
+
+            <div class="glass-card job-card">
+
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+
+                    <div class="d-flex gap-3">
+
+                        <div class="job-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Desenvolvedor Front-end
+                            </h3>
+
+                            <p>
+                                Desenvolvimento e manutenção das interfaces
+                                digitais da Verris.
+                            </p>
+
+                            <span class="job-tag">
+                                Tecnologia
+                            </span>
+
+                            <span class="job-tag">
+                                Front-end
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <a href="#candidatura" class="btn-vagas">
+                            Tenho interesse
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- VAGA 2 -->
+
+            <div class="glass-card job-card">
+
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+
+                    <div class="d-flex gap-3">
+
+                        <div class="job-icon">
+                            <i class="bi bi-megaphone-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Marketing e Conteúdo
+                            </h3>
+
+                            <p>
+                                Criação de campanhas, conteúdos e estratégias
+                                para fortalecer a presença da Verris.
+                            </p>
+
+                            <span class="job-tag">
+                                Marketing
+                            </span>
+
+                            <span class="job-tag">
+                                Conteúdo
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <a href="#candidatura" class="btn-vagas">
+                            Tenho interesse
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- VAGA 3 -->
+
+            <div class="glass-card job-card">
+
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+
+                    <div class="d-flex gap-3">
+
+                        <div class="job-icon">
+                            <i class="bi bi-camera-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Fotografia e Audiovisual
+                            </h3>
+
+                            <p>
+                                Produção de imagens e materiais visuais para
+                                produtos e campanhas da marca.
+                            </p>
+
+                            <span class="job-tag">
+                                Fotografia
+                            </span>
+
+                            <span class="job-tag">
+                                Audiovisual
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <a href="#candidatura" class="btn-vagas">
+                            Tenho interesse
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- VAGA 4 -->
+
+            <div class="glass-card job-card">
+
+                <div class="d-flex flex-column flex-md-row justify-content-between gap-3">
+
+                    <div class="d-flex gap-3">
+
+                        <div class="job-icon">
+                            <i class="bi bi-cart-fill"></i>
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                E-commerce
+                            </h3>
+
+                            <p>
+                                Atuação na experiência de compra e operação
+                                do nosso comércio digital.
+                            </p>
+
+                            <span class="job-tag">
+                                E-commerce
+                            </span>
+
+                            <span class="job-tag">
+                                Vendas
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex align-items-center">
+
+                        <a href="#candidatura" class="btn-vagas">
+                            Tenho interesse
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FORMULÁRIO
+    ========================= -->
+
+    <section class="section" id="candidatura">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-start">
+
+                <div class="col-lg-5">
+
+                    <span class="hero-badge">
+                        Envie seu currículo
+                    </span>
+
+                    <h2 class="section-title">
+                        Não encontrou uma vaga?
+                    </h2>
+
+                    <p class="section-subtitle">
+                        Mesmo que a oportunidade que você procura não esteja
+                        disponível no momento, envie seus dados. Novas vagas
+                        podem surgir e seu perfil pode fazer parte do nosso banco
+                        de talentos.
+                    </p>
+
+                    <div class="mt-4">
+
+                        <div class="d-flex gap-3 mb-4">
+
+                            <div class="benefit-icon mb-0">
+                                <i class="bi bi-file-earmark-person"></i>
+                            </div>
+
+                            <div>
+
+                                <h5 class="fw-bold mb-1">
+                                    Seu perfil importa
+                                </h5>
+
+                                <p class="text-muted small mb-0">
+                                    Conte um pouco sobre suas experiências,
+                                    conhecimentos e objetivos.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="d-flex gap-3">
+
+                            <div class="benefit-icon mb-0">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+
+                            <div>
+
+                                <h5 class="fw-bold mb-1">
+                                    Entraremos em contato
+                                </h5>
+
+                                <p class="text-muted small mb-0">
+                                    Caso seu perfil combine com uma oportunidade,
+                                    nossa equipe poderá entrar em contato.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-7">
+
+                    <div class="glass-card form-card">
+
+                        <form>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+
+                                    <label for="nome" class="form-label">
+                                        Nome completo
+                                    </label>
+
+                                    <input type="text"
+                                        class="form-control"
+                                        id="nome"
+                                        placeholder="Digite seu nome">
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="email" class="form-label">
+                                        E-mail
+                                    </label>
+
+                                    <input type="email"
+                                        class="form-control"
+                                        id="email"
+                                        placeholder="seuemail@email.com">
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="telefone" class="form-label">
+                                        Telefone
+                                    </label>
+
+                                    <input type="tel"
+                                        class="form-control"
+                                        id="telefone"
+                                        placeholder="(00) 00000-0000">
+
+                                </div>
+
+                                <div class="col-md-6">
+
+                                    <label for="area" class="form-label">
+                                        Área de interesse
+                                    </label>
+
+                                    <select class="form-select" id="area">
+
+                                        <option selected>
+                                            Selecione uma área
+                                        </option>
+
+                                        <option>
+                                            Tecnologia
+                                        </option>
+
+                                        <option>
+                                            Marketing
+                                        </option>
+
+                                        <option>
+                                            Audiovisual
+                                        </option>
+
+                                        <option>
+                                            E-commerce
+                                        </option>
+
+                                        <option>
+                                            Atendimento
+                                        </option>
+
+                                        <option>
+                                            Outra
+                                        </option>
+
+                                    </select>
+
+                                </div>
+
+                                <div class="col-12">
+
+                                    <label for="mensagem" class="form-label">
+                                        Sobre você
+                                    </label>
+
+                                    <textarea class="form-control"
+                                        id="mensagem"
+                                        placeholder="Conte um pouco sobre você, suas experiências e seus objetivos..."></textarea>
+
+                                </div>
+
+                                <div class="col-12">
+
+                                    <label for="curriculo" class="form-label">
+                                        Currículo
+                                    </label>
+
+                                    <input type="file"
+                                        class="form-control"
+                                        id="curriculo"
+                                        accept=".pdf,.doc,.docx">
+
+                                    <small class="text-muted">
+                                        Formatos aceitos: PDF, DOC ou DOCX.
+                                    </small>
+
+                                </div>
+
+                                <div class="col-12 mt-4">
+
+                                    <button type="submit" class="btn-enviar">
+                                        <i class="bi bi-send-fill me-2"></i>
+                                        Enviar candidatura
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         CTA
+    ========================= -->
+
+    <section class="section pt-0">
+
+        <div class="container">
+
+            <div class="cta">
+
+                <div class="cta-content">
+
+                    <h2>
+                        Vamos construir o futuro juntos.
+                    </h2>
+
+                    <p>
+                        A Verris está sempre em busca de pessoas curiosas,
+                        criativas e dispostas a aprender. Se você acredita
+                        que pode contribuir, queremos conhecer você.
+                    </p>
+
+                    <a href="#candidatura" class="btn-cta">
+                        Enviar meu currículo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- SOBRE -->
+                <div class="col-lg-4">
+
+                    <a href="index.html"
+                        class="logo footer-logo text-decoration-none">
+
+                        <div class="logo-icon">
+                            V
+                        </div>
+
+                        <div class="logo-text">
+
+                            <span class="logo-title">
+                                VERRIS
+                            </span>
+
+                            <span class="logo-subtitle">
+                                COMPANY
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <p class="footer-text mt-4">
+                        A Verris Company é uma empresa focada em estilo,
+                        tecnologia e experiências digitais para quem vive
+                        o universo dos sneakers.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- LINKS RÁPIDOS -->
+                <div class="col-6 col-lg-2">
+
+                    <h5>
+                        Links rápidos
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- EMPRESA -->
+                <div class="col-6 col-lg-2">
+
+                    <h5>
+                        Empresa
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="suporte.html">
+                                Suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Privacidade
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- CONTATO -->
+                <div class="col-lg-4">
+
+                    <h5>
+                        Fale conosco
+                    </h5>
+
+                    <div class="footer-contact">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+5524992582209"
+                            class="text-decoration-none text-secondary">
+                            +55 (24) 99258-2209
+                        </a>
+                    </div>
+
+                    <div class="footer-contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:victorhugorochadasilva021@gmail.com"
+                            class="text-decoration-none text-secondary">
+                            victorhugorochadasilva021@gmail.com
+                        </a>
+                    </div>
+
+                    <div class="footer-contact">
+                        <i class="fa-solid fa-clock"></i>
+                        Segunda a sexta, 09h às 18h
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-bottom text-center">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

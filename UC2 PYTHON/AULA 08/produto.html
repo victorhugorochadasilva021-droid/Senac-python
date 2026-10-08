@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Produto - Verris Company</title>
+
+    <meta name="description" content="Confira os detalhes do produto na Verris Company.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at 15% 10%, rgba(0, 123, 255, 0.12), transparent 30%),
+                radial-gradient(circle at 85% 25%, rgba(0, 102, 255, 0.08), transparent 28%),
+                #f5f7fb;
+            color: #111827;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: #05070b;
+            color: #ffffff;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        .top-bar span {
+            color: #3b9cff;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar {
+            padding: 15px 0;
+        }
+
+
+        /* =========================
+           LOGO
+        ========================= */
+
+        .brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+
+            border: 2px solid #111827;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+
+            transform: skew(-8deg);
+
+            margin-right: 10px;
+
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .nav-link {
+            color: #1f2937 !important;
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0 8px;
+
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #007bff !important;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .header-icons a {
+            color: #111827;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .header-icons a:hover {
+            color: #007bff;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           BREADCRUMB
+        ========================= */
+
+        .breadcrumb-area {
+            padding: 30px 0 15px;
+        }
+
+        .breadcrumb {
+            margin: 0;
+        }
+
+        .breadcrumb-item {
+            font-size: 13px;
+        }
+
+        .breadcrumb-item a {
+            color: #6b7280;
+            transition: 0.3s;
+        }
+
+        .breadcrumb-item a:hover {
+            color: #007bff;
+        }
+
+        .breadcrumb-item.active {
+            color: #111827;
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           PRODUCT AREA
+        ========================= */
+
+        .product-section {
+            padding: 20px 0 80px;
+        }
+
+        .product-wrapper {
+            background: rgba(255, 255, 255, 0.78);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+
+            border-radius: 24px;
+
+            padding: 30px;
+
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.07);
+
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+
+        /* =========================
+           PRODUCT IMAGE
+        ========================= */
+
+        .product-image-area {
+            position: relative;
+
+            min-height: 570px;
+
+            border-radius: 20px;
+
+            background:
+                radial-gradient(circle at center,
+                    rgba(0, 123, 255, 0.16),
+                    transparent 55%),
+                linear-gradient(145deg, #f8fafc, #e9eef5);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            border: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .product-image-area::before {
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+            height: 330px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 123, 255, 0.08);
+
+            filter: blur(20px);
+        }
+
+        .main-product-image {
+            position: relative;
+            z-index: 2;
+
+            width: 85%;
+            max-width: 520px;
+
+            object-fit: contain;
+
+            transition: 0.5s ease;
+
+            filter:
+                drop-shadow(0 25px 25px rgba(0, 0, 0, 0.18));
+        }
+
+        .main-product-image:hover {
+            transform: scale(1.04);
+        }
+
+
+        /* =========================
+           FAVORITE
+        ========================= */
+
+        .favorite-btn {
+            position: absolute;
+
+            top: 18px;
+            right: 18px;
+
+            z-index: 10;
+
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(0, 0, 0, 0.08);
+
+            background: rgba(255, 255, 255, 0.95);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #111827;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .favorite-btn:hover {
+            color: #007bff;
+            transform: scale(1.08);
+        }
+
+        .favorite-btn.active {
+            color: #007bff;
+        }
+
+
+        /* =========================
+           PRODUCT INFO
+        ========================= */
+
+        .product-info {
+            padding: 10px 10px 10px 35px;
+        }
+
+        .product-category {
+            display: inline-block;
+
+            color: #007bff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 10px;
+        }
+
+        .product-title {
+            font-size: 38px;
+            font-weight: 800;
+
+            color: #111827;
+
+            line-height: 1.1;
+
+            margin-bottom: 12px;
+        }
+
+        .product-subtitle {
+            color: #6b7280;
+
+            font-size: 15px;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           RATING
+        ========================= */
+
+        .rating-area {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .stars {
+            color: #007bff;
+            font-size: 15px;
+        }
+
+        .rating-text {
+            color: #6b7280;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           PRICE
+        ========================= */
+
+        .price-area {
+            padding: 18px 0;
+
+            border-top: 1px solid rgba(0, 0, 0, 0.07);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+
+            margin-bottom: 25px;
+        }
+
+        .old-price {
+            color: #9ca3af;
+
+            font-size: 14px;
+
+            text-decoration: line-through;
+
+            margin-bottom: 3px;
+        }
+
+        .current-price {
+            color: #111827;
+
+            font-size: 32px;
+            font-weight: 800;
+        }
+
+        .installment {
+            color: #007bff;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            margin-top: 3px;
+        }
+
+
+        /* =========================
+           SIZE
+        ========================= */
+
+        .option-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 12px;
+        }
+
+        .option-title strong {
+            font-size: 14px;
+        }
+
+        .size-guide {
+            color: #007bff;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+
+            margin-bottom: 25px;
+        }
+
+        .size-btn {
+            width: 52px;
+            height: 44px;
+
+            border-radius: 10px;
+
+            border: 1px solid #d7dce3;
+
+            background: #ffffff;
+
+            color: #111827;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        .size-btn:hover,
+        .size-btn.active {
+            background: #007bff;
+            border-color: #007bff;
+            color: white;
+
+            box-shadow: 0 8px 18px rgba(0, 123, 255, 0.22);
+        }
+
+
+        /* =========================
+           QUANTITY
+        ========================= */
+
+        .quantity-area {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 18px;
+        }
+
+        .quantity-label {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .quantity-box {
+            display: flex;
+            align-items: center;
+
+            border: 1px solid #d7dce3;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+
+            background: #ffffff;
+        }
+
+        .quantity-btn {
+            width: 38px;
+            height: 40px;
+
+            border: 0;
+
+            background: #ffffff;
+
+            color: #111827;
+
+            cursor: pointer;
+
+            font-size: 16px;
+
+            transition: 0.2s;
+        }
+
+        .quantity-btn:hover {
+            background: #f0f4f8;
+            color: #007bff;
+        }
+
+        .quantity-number {
+            width: 40px;
+
+            text-align: center;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
+
+        .buy-btn,
+        .cart-btn {
+            width: 100%;
+
+            min-height: 52px;
+
+            border-radius: 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 10px;
+
+            font-size: 14px;
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        .buy-btn {
+            background: #007bff;
+
+            border: 1px solid #007bff;
+
+            color: white;
+
+            margin-bottom: 10px;
+
+            box-shadow: 0 12px 25px rgba(0, 123, 255, 0.20);
+        }
+
+        .buy-btn:hover {
+            background: #0069d9;
+            transform: translateY(-2px);
+
+            box-shadow: 0 16px 30px rgba(0, 123, 255, 0.28);
+        }
+
+        .cart-btn {
+            background: white;
+
+            border: 1px solid #d7dce3;
+
+            color: #111827;
+        }
+
+        .cart-btn:hover {
+            border-color: #007bff;
+            color: #007bff;
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SHIPPING
+        ========================= */
+
+        .shipping-info {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 12px;
+
+            margin-top: 25px;
+        }
+
+        .shipping-card {
+            padding: 15px;
+
+            border-radius: 12px;
+
+            background: #f7f9fc;
+
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .shipping-card i {
+            color: #007bff;
+
+            font-size: 18px;
+
+            margin-bottom: 7px;
+        }
+
+        .shipping-card strong {
+            display: block;
+
+            font-size: 12px;
+
+            margin-bottom: 3px;
+        }
+
+        .shipping-card span {
+            color: #6b7280;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .details-section {
+            padding: 0 0 80px;
+        }
+
+        .details-card {
+            background: rgba(255, 255, 255, 0.85);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+
+            border-radius: 20px;
+
+            padding: 35px;
+
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.05);
+        }
+
+        .details-title {
+            font-size: 24px;
+
+            font-weight: 800;
+
+            margin-bottom: 20px;
+        }
+
+        .details-text {
+            color: #6b7280;
+
+            font-size: 14px;
+
+            line-height: 1.8;
+
+            margin-bottom: 20px;
+        }
+
+        .details-list {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .details-list li {
+            display: flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            color: #374151;
+
+            font-size: 14px;
+
+            margin-bottom: 12px;
+        }
+
+        .details-list i {
+            color: #007bff;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #05070b;
+
+            color: white;
+
+            padding: 60px 0 25px;
+
+            border-top: 1px solid rgba(0, 123, 255, 0.2);
+        }
+
+        .footer-logo {
+            font-size: 24px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 12px;
+        }
+
+        .footer-description {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            line-height: 1.7;
+
+            max-width: 330px;
+        }
+
+        .footer-title {
+            font-size: 14px;
+
+            font-weight: 800;
+
+            margin-bottom: 18px;
+
+            letter-spacing: 1px;
+        }
+
+        .footer-links {
+            list-style: none;
+
+            padding: 0;
+
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            transition: 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #007bff;
+
+            padding-left: 4px;
+        }
+
+        .footer-contact p {
+            color: #9ca3af;
+
+            font-size: 13px;
+
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            color: #007bff;
+
+            width: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+
+            gap: 10px;
+
+            margin-top: 18px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+
+            border-color: #007bff;
+
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+            margin-top: 45px;
+
+            padding-top: 20px;
+
+            text-align: center;
+
+            color: #6b7280;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .product-info {
+                padding: 30px 10px 10px;
+            }
+
+            .product-image-area {
+                min-height: 450px;
+            }
+
+            .product-title {
+                font-size: 32px;
+            }
+
+            .navbar-collapse {
+                padding-top: 15px;
+            }
+
+            .header-icons {
+                margin-top: 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+
+            .top-bar {
+                font-size: 10px;
+            }
+
+            .product-wrapper {
+                padding: 15px;
+                border-radius: 18px;
+            }
+
+            .product-image-area {
+                min-height: 330px;
+            }
+
+            .main-product-image {
+                width: 90%;
+            }
+
+            .product-title {
+                font-size: 28px;
+            }
+
+            .current-price {
+                font-size: 28px;
+            }
+
+            .shipping-info {
+                grid-template-columns: 1fr;
+            }
+
+            .details-card {
+                padding: 25px 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =========================
+         TOP BAR
+    ========================== -->
+
+    <div class="top-bar">
+        FRETE GRÁTIS ACIMA DE <span>R$ 499</span> • PAGAMENTO SEGURO
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="container">
+
+            <nav class="navbar navbar-expand-lg">
+
+                <a href="index.html" class="brand">
+
+                    <div class="logo-icon">
+                        V
+                    </div>
+
+                    <div class="logo-text">
+                        <span class="logo-title">
+                            VERRIS
+                        </span>
+
+                        <span class="logo-subtitle">
+                            COMPANY
+                        </span>
+                    </div>
+
+                </a>
+
+
+                <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNav">
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div class="collapse navbar-collapse" id="mainNav">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <div class="header-icons">
+
+                        <a href="perfil.html" title="Perfil">
+                            <i class="fa-regular fa-user"></i>
+                        </a>
+
+                        <a href="favoritos.html" title="Favoritos">
+                            <i class="fa-regular fa-heart"></i>
+                        </a>
+
+                        <a href="carrinho.html" title="Carrinho">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </a>
+
+                        <a href="auth/login.html" title="Entrar">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         BREADCRUMB
+    ========================== -->
+
+    <section class="breadcrumb-area">
+
+        <div class="container">
+
+            <nav aria-label="breadcrumb">
+
+                <ol class="breadcrumb">
+
+                    <li class="breadcrumb-item">
+                        <a href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item">
+                        <a href="produtos-list.html">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li class="breadcrumb-item active">
+                        Air Jordan 5 OG Black Metallic
+                    </li>
+
+                </ol>
+
+            </nav>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUTO
+    ========================== -->
+
+    <main>
+
+        <section class="product-section">
+
+            <div class="container">
+
+                <div class="product-wrapper">
+
+                    <div class="row align-items-center g-4">
+
+
+                        <!-- IMAGEM -->
+
+                        <div class="col-lg-6">
+
+                            <div class="product-image-area">
+
+                                <button class="favorite-btn"
+                                    id="favoriteButton"
+                                    type="button"
+                                    title="Adicionar aos favoritos">
+
+                                    <i class="fa-regular fa-heart"></i>
+
+                                </button>
+
+
+                                <img
+                                    src="https://imgnike-a.akamaihd.net/768x768/118467IEA1.jpg"
+                                    alt="Air Jordan 5 OG Black Metallic"
+                                    class="main-product-image">
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- INFORMAÇÕES -->
+
+                        <div class="col-lg-6">
+
+                            <div class="product-info">
+
+                                <span class="product-category">
+                                    Jordan 5
+                                </span>
+
+
+                                <h1 class="product-title">
+                                    Air Jordan 5 OG
+                                    Black Metallic
+                                </h1>
+
+
+                                <p class="product-subtitle">
+                                    Black / Metallic Silver
+                                </p>
+
+
+                                <!-- AVALIAÇÃO -->
+
+                                <div class="rating-area">
+
+                                    <div class="stars">
+
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+
+                                    </div>
+
+                                    <span class="rating-text">
+                                        4.9 • 127 avaliações
+                                    </span>
+
+                                </div>
+
+
+                                <!-- PREÇO -->
+
+                                <div class="price-area">
+
+                                    <div class="old-price">
+                                        R$ 1.999,90
+                                    </div>
+
+                                    <div class="current-price">
+                                        R$ 1.799,90
+                                    </div>
+
+                                    <div class="installment">
+                                        ou 10x de R$ 179,99 sem juros
+                                    </div>
+
+                                </div>
+
+
+                                <!-- TAMANHOS -->
+
+                                <div class="option-title">
+
+                                    <strong>
+                                        Escolha seu tamanho
+                                    </strong>
+
+                                    <a href="#" class="size-guide">
+                                        Guia de tamanhos
+                                    </a>
+
+                                </div>
+
+
+                                <div class="sizes">
+
+                                    <button class="size-btn" type="button">
+                                        38
+                                    </button>
+
+                                    <button class="size-btn" type="button">
+                                        39
+                                    </button>
+
+                                    <button class="size-btn" type="button">
+                                        40
+                                    </button>
+
+                                    <button class="size-btn active" type="button">
+                                        41
+                                    </button>
+
+                                    <button class="size-btn" type="button">
+                                        42
+                                    </button>
+
+                                    <button class="size-btn" type="button">
+                                        43
+                                    </button>
+
+                                    <button class="size-btn" type="button">
+                                        44
+                                    </button>
+
+                                </div>
+
+
+                                <!-- QUANTIDADE -->
+
+                                <div class="quantity-area">
+
+                                    <span class="quantity-label">
+                                        Quantidade:
+                                    </span>
+
+                                    <div class="quantity-box">
+
+                                        <button
+                                            class="quantity-btn"
+                                            id="minusBtn"
+                                            type="button">
+                                            −
+                                        </button>
+
+                                        <span
+                                            class="quantity-number"
+                                            id="quantity">
+                                            1
+                                        </span>
+
+                                        <button
+                                            class="quantity-btn"
+                                            id="plusBtn"
+                                            type="button">
+                                            +
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <!-- BOTÕES -->
+
+                                <button
+                                    class="buy-btn"
+                                    type="button">
+
+                                    <i class="fa-solid fa-bolt"></i>
+
+                                    Comprar agora
+
+                                </button>
+
+
+                                <button
+                                    class="cart-btn"
+                                    type="button">
+
+                                    <i class="fa-solid fa-cart-shopping"></i>
+
+                                    Adicionar ao carrinho
+
+                                </button>
+
+
+                                <!-- ENTREGA -->
+
+                                <div class="shipping-info">
+
+                                    <div class="shipping-card">
+
+                                        <i class="fa-solid fa-truck-fast"></i>
+
+                                        <strong>
+                                            Frete grátis
+                                        </strong>
+
+                                        <span>
+                                            Para compras acima de R$ 499
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="shipping-card">
+
+                                        <i class="fa-solid fa-shield-halved"></i>
+
+                                        <strong>
+                                            Compra segura
+                                        </strong>
+
+                                        <span>
+                                            Seus dados protegidos
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DETALHES
+        ========================== -->
+
+        <section class="details-section">
+
+            <div class="container">
+
+                <div class="details-card">
+
+                    <h2 class="details-title">
+                        Sobre o produto
+                    </h2>
+
+                    <p class="details-text">
+
+                        O Air Jordan 5 OG Black Metallic combina o visual
+                        clássico da linha Jordan com uma construção premium
+                        pensada para o uso diário. Seu design marcante
+                        apresenta a tradicional estética do Jordan 5,
+                        trazendo detalhes em preto e Metallic Silver.
+
+                    </p>
+
+                    <p class="details-text">
+
+                        Um modelo versátil para completar diferentes
+                        combinações, mantendo o estilo característico
+                        da linha Air Jordan.
+
+                    </p>
+
+
+                    <ul class="details-list">
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Design clássico Air Jordan 5
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Construção confortável
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Solado com excelente aderência
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Produto selecionado pela Verris Company
+                        </li>
+
+                        <li>
+                            <i class="fa-solid fa-check"></i>
+                            Envio seguro para todo o Brasil
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- MARCA -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="footer-logo">
+                        VERRIS
+                    </div>
+
+                    <p class="footer-description">
+
+                        A Verris Company reúne estilo, qualidade e
+                        autenticidade para quem busca os melhores
+                        produtos em um só lugar.
+
+                    </p>
+
+
+                    <div class="social-icons">
+
+                        <a
+                            href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a
+                            href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a
+                            href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="footer-title">
+                        LINKS RÁPIDOS
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre nós
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="perfil.html">
+                                Minha conta
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- SUPORTE -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h5 class="footer-title">
+                        SUPORTE
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="suporte.html">
+                                Central de suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Privacidade
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="carrinho.html">
+                                Carrinho
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="favoritos.html">
+                                Favoritos
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTATO -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <h5 class="footer-title">
+                        CONTATO
+                    </h5>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            <i class="fa-solid fa-phone"></i>
+                            +55 (24) 99258-2209
+                        </p>
+
+                        <p>
+                            <i class="fa-solid fa-envelope"></i>
+                            victorhugorochadasilva021@gmail.com
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================
+           TAMANHOS
+        ========================== */
+
+        const sizeButtons = document.querySelectorAll(".size-btn");
+
+        sizeButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                sizeButtons.forEach(btn => {
+                    btn.classList.remove("active");
+                });
+
+                button.classList.add("active");
+
+            });
+
+        });
+
+
+        /* =========================
+           FAVORITO
+        ========================== */
+
+        const favoriteButton =
+            document.getElementById("favoriteButton");
+
+        favoriteButton.addEventListener("click", () => {
+
+            favoriteButton.classList.toggle("active");
+
+            const icon =
+                favoriteButton.querySelector("i");
+
+            if (favoriteButton.classList.contains("active")) {
+
+                icon.classList.remove("fa-regular");
+                icon.classList.add("fa-solid");
+
+            } else {
+
+                icon.classList.remove("fa-solid");
+                icon.classList.add("fa-regular");
+
+            }
+
+        });
+
+
+        /* =========================
+           QUANTIDADE
+        ========================== */
+
+        const quantityElement =
+            document.getElementById("quantity");
+
+        const minusButton =
+            document.getElementById("minusBtn");
+
+        const plusButton =
+            document.getElementById("plusBtn");
+
+
+        let quantity = 1;
+
+
+        minusButton.addEventListener("click", () => {
+
+            if (quantity > 1) {
+
+                quantity--;
+
+                quantityElement.textContent = quantity;
+
+            }
+
+        });
+
+
+        plusButton.addEventListener("click", () => {
+
+            if (quantity < 10) {
+
+                quantity++;
+
+                quantityElement.textContent = quantity;
+
+            }
+
+        });
+
+
+        /* =========================
+           BOTÃO COMPRAR
+        ========================== */
+
+        const buyButton =
+            document.querySelector(".buy-btn");
+
+        buyButton.addEventListener("click", () => {
+
+            const selectedSize =
+                document.querySelector(".size-btn.active");
+
+            if (!selectedSize) {
+
+                alert("Selecione um tamanho antes de continuar.");
+
+                return;
+
+            }
+
+            window.location.href = "carrinho.html";
+
+        });
+
+
+        /* =========================
+           ADICIONAR AO CARRINHO
+        ========================== */
+
+        const cartButton =
+            document.querySelector(".cart-btn");
+
+        cartButton.addEventListener("click", () => {
+
+            const selectedSize =
+                document.querySelector(".size-btn.active");
+
+            if (!selectedSize) {
+
+                alert("Selecione um tamanho antes de adicionar ao carrinho.");
+
+                return;
+
+            }
+
+            alert(
+                "Produto adicionado ao carrinho!\n\n" +
+                "Tamanho: " + selectedSize.textContent +
+                "\nQuantidade: " + quantity
+            );
+
+        });
+
+    </script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <title>Air Jordan - Verris Company</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Victor Hugo Rocha">
+    <meta name="description" content="Confira a seleção de Air Jordan da Verris Company.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        :root {
+            --azul: #006eff;
+            --azul-claro: #1685ff;
+            --azul-neon: #008cff;
+            --azul-escuro: #03152f;
+            --azul-deep: #020b1d;
+            --preto: #020408;
+            --cinza: #9ba8bb;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+
+            background:
+                radial-gradient(
+                    circle at 50% 0%,
+                    rgba(0, 110, 255, 0.08),
+                    transparent 35%
+                ),
+                #f5f7fa;
+
+            color: #111827;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+
+        /* =====================================================
+           BARRA SUPERIOR
+        ===================================================== */
+
+        .top-bar {
+            background:
+                linear-gradient(
+                    90deg,
+                    #004dcc,
+                    #0077ff,
+                    #004dcc
+                );
+
+            color: white;
+
+            text-align: center;
+
+            padding: 8px 15px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* =====================================================
+           HEADER
+        ===================================================== */
+
+        .main-header {
+            background: rgba(255, 255, 255, 0.92);
+
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 78px;
+        }
+
+
+        /* =====================================================
+           LOGO
+        ===================================================== */
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+
+            border: 2px solid #111827;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+
+            transform: skew(-8deg);
+
+            margin-right: 10px;
+
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+
+            font-size: 22px;
+            font-weight: 900;
+
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+
+            font-size: 8px;
+            font-weight: 700;
+
+            letter-spacing: 4px;
+
+            margin-top: 4px;
+        }
+
+
+        /* =====================================================
+           MENU
+        ===================================================== */
+
+        .navbar-nav {
+            gap: 8px;
+        }
+
+        .navbar .nav-link {
+            color: #202733 !important;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            padding: 9px 13px !important;
+
+            border-radius: 8px;
+
+            transition: 0.25s;
+        }
+
+        .navbar .nav-link:hover {
+            color: var(--azul) !important;
+
+            background: rgba(0, 110, 255, 0.07);
+        }
+
+        .navbar .nav-link.active {
+            color: var(--azul) !important;
+
+            background: rgba(0, 110, 255, 0.08);
+        }
+
+
+        /* =====================================================
+           ÍCONES HEADER
+        ===================================================== */
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+
+            gap: 17px;
+        }
+
+        .header-icon {
+            color: #1c2533;
+
+            font-size: 19px;
+
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+        .header-icon:hover {
+            color: var(--azul);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =====================================================
+           LOGIN
+        ===================================================== */
+
+        .login-btn {
+            border: 1px solid var(--azul);
+
+            color: var(--azul);
+
+            background: transparent;
+
+            border-radius: 8px;
+
+            font-weight: 700;
+            font-size: 13px;
+
+            padding: 8px 16px;
+
+            transition: 0.25s;
+        }
+
+        .login-btn:hover {
+            background: var(--azul);
+
+            color: white;
+
+            box-shadow:
+                0 0 18px rgba(0, 110, 255, 0.35);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .category-hero {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 330px;
+
+            display: flex;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 50%,
+                    rgba(0, 119, 255, 0.30),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 20% 30%,
+                    rgba(0, 81, 255, 0.16),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #020817,
+                    #04152f,
+                    #020817
+                );
+
+            color: white;
+        }
+
+        .category-hero::before {
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            right: -180px;
+            top: -220px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 119, 255, 0.13);
+
+            filter: blur(80px);
+        }
+
+        .category-hero::after {
+            content: "";
+
+            position: absolute;
+
+            width: 350px;
+            height: 350px;
+
+            left: -150px;
+            bottom: -220px;
+
+            border-radius: 50%;
+
+            background: rgba(0, 102, 255, 0.10);
+
+            filter: blur(70px);
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .hero-label {
+            display: inline-block;
+
+            color: #62b0ff;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 14px;
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 6vw, 72px);
+
+            font-weight: 900;
+
+            letter-spacing: -2px;
+
+            margin: 0;
+        }
+
+        .hero-title span {
+            color: #1685ff;
+
+            text-shadow:
+                0 0 25px rgba(0, 132, 255, 0.35);
+        }
+
+        .hero-description {
+            max-width: 600px;
+
+            color: #aebbd0;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           PRODUTOS
+        ===================================================== */
+
+        .products-section {
+            padding: 70px 0;
+        }
+
+        .section-top {
+            display: flex;
+
+            justify-content: space-between;
+            align-items: end;
+
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 30px;
+
+            font-weight: 900;
+
+            margin: 0;
+        }
+
+        .section-subtitle {
+            color: #697586;
+
+            font-size: 14px;
+
+            margin: 7px 0 0;
+        }
+
+
+        /* =====================================================
+           CARD
+        ===================================================== */
+
+        .product-card {
+            position: relative;
+
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+
+            background: rgba(255, 255, 255, 0.88);
+
+            border: 1px solid rgba(0, 0, 0, 0.07);
+
+            border-radius: 16px;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+            backdrop-filter: blur(12px);
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0, 110, 255, 0.35);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.10),
+                0 0 25px rgba(0, 110, 255, 0.10);
+        }
+
+
+        /* =====================================================
+           ÁREA DA IMAGEM
+        ===================================================== */
+
+        .product-image-container {
+            position: relative;
+
+            width: 100%;
+            height: 255px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0, 110, 255, 0.06),
+                    transparent 65%
+                );
+
+            padding: 20px;
+        }
+
+        .produto-img {
+            width: 100%;
+            height: 225px;
+
+            object-fit: contain;
+
+            display: block;
+
+            transition: 0.35s;
+        }
+
+        .product-card:hover .produto-img {
+            transform: scale(1.05);
+        }
+
+
+        /* =====================================================
+           BADGE
+        ===================================================== */
+
+        .product-badge {
+            position: absolute;
+
+            top: 14px;
+            left: 14px;
+
+            z-index: 5;
+
+            background: #071a38;
+
+            color: #62b0ff;
+
+            border: 1px solid rgba(0, 132, 255, 0.3);
+
+            padding: 6px 10px;
+
+            border-radius: 6px;
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =====================================================
+           CORAÇÃO CORRIGIDO
+        ===================================================== */
+
+        .favorite-btn {
+            position: absolute;
+
+            top: 14px;
+            right: 14px;
+
+            z-index: 10;
+
+            width: 38px;
+            height: 38px;
+
+            padding: 0;
+            margin: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(0, 0, 0, 0.10);
+
+            background: rgba(255, 255, 255, 0.95);
+
+            color: #202938;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08);
+
+            transition:
+                color 0.2s ease,
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .favorite-btn i {
+            font-size: 16px;
+
+            line-height: 1;
+
+            pointer-events: none;
+        }
+
+        .favorite-btn:hover {
+            color: var(--azul);
+
+            background: white;
+
+            border-color: rgba(0, 110, 255, 0.35);
+
+            transform: scale(1.08);
+
+            box-shadow:
+                0 0 18px rgba(0, 110, 255, 0.18);
+        }
+
+
+        /* =====================================================
+           CORPO DO CARD
+        ===================================================== */
+
+        .product-body {
+            padding: 20px;
+
+            display: flex;
+            flex-direction: column;
+
+            flex: 1;
+
+            min-height: 205px;
+        }
+
+        .product-category {
+            color: var(--azul);
+
+            font-size: 10px;
+            font-weight: 800;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 7px;
+        }
+
+        .product-title {
+            font-size: 17px;
+
+            font-weight: 800;
+
+            color: #101827;
+
+            margin-bottom: 9px;
+
+            line-height: 1.3;
+
+            min-height: 44px;
+        }
+
+        .product-description {
+            color: #687386;
+
+            font-size: 13px;
+
+            line-height: 1.55;
+
+            margin-bottom: 18px;
+
+            min-height: 40px;
+        }
+
+
+        /* =====================================================
+           BOTÃO CARRINHO CORRIGIDO
+        ===================================================== */
+
+        .product-btn {
+            width: 100%;
+
+            min-height: 43px;
+
+            margin-top: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+
+            border-radius: 9px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #006eff,
+                    #008cff
+                );
+
+            color: white;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            padding: 11px 15px;
+
+            line-height: 1;
+
+            text-decoration: none;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .product-btn i {
+            font-size: 14px;
+
+            line-height: 1;
+        }
+
+        .product-btn:hover {
+            color: white;
+
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 8px 22px rgba(0, 110, 255, 0.30);
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background:
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(0, 110, 255, 0.13),
+                    transparent 25%
+                ),
+                #02050b;
+        }
+
+        footer a {
+            transition: 0.25s;
+        }
+
+        footer a:hover {
+            color: #50a7ff !important;
+
+            opacity: 1;
+        }
+
+        .social-btn {
+            width: 38px;
+            height: 38px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid rgba(255, 255, 255, 0.18);
+
+            color: white;
+
+            border-radius: 8px;
+
+            transition: 0.25s;
+        }
+
+        .social-btn:hover {
+            color: white !important;
+
+            background: var(--azul);
+
+            border-color: var(--azul);
+
+            box-shadow:
+                0 0 18px rgba(0, 110, 255, 0.30);
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 991px) {
+
+            .header-icons {
+                margin-top: 18px;
+
+                padding-bottom: 10px;
+            }
+
+            .category-hero {
+                min-height: 300px;
+            }
+
+            .section-top {
+                align-items: flex-start;
+
+                flex-direction: column;
+            }
+
+        }
+
+
+        @media (max-width: 576px) {
+
+            .top-bar {
+                font-size: 10px;
+            }
+
+            .navbar {
+                min-height: 70px;
+            }
+
+            .category-hero {
+                min-height: 280px;
+            }
+
+            .hero-title {
+                font-size: 42px;
+            }
+
+            .hero-description {
+                font-size: 14px;
+            }
+
+            .products-section {
+                padding: 45px 0;
+            }
+
+            .product-image-container {
+                height: 240px;
+            }
+
+            .produto-img {
+                height: 210px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     BARRA PROMOCIONAL
+===================================================== -->
+
+<div class="top-bar">
+
+    ENVIO PARA TODO O BRASIL • CONFIRA NOSSAS NOVIDADES
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="main-header">
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+
+            <!-- LOGO -->
+
+            <a
+                href="index.html"
+                class="logo-wrapper">
+
+                <div class="logo-icon">
+                    V
+                </div>
+
+                <div class="logo-text">
+
+                    <span class="logo-title">
+                        VERRIS
+                    </span>
+
+                    <span class="logo-subtitle">
+                        COMPANY
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- MENU MOBILE -->
+
+            <button
+                class="navbar-toggler border-0 shadow-none"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+                aria-controls="mainMenu"
+                aria-expanded="false"
+                aria-label="Abrir menu">
+
+                <i class="fa-solid fa-bars text-dark fs-4"></i>
+
+            </button>
+
+
+            <!-- MENU -->
+
+            <div
+                class="collapse navbar-collapse"
+                id="mainMenu">
+
+                <ul class="navbar-nav me-auto ms-lg-4">
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link active"
+                            href="produtos-list.html">
+
+                            Produtos
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="promocoes.html">
+
+                            Promoções
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="sobre.html">
+
+                            Sobre
+
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a
+                            class="nav-link"
+                            href="blog.html">
+
+                            Blog
+
+                        </a>
+
+                    </li>
+
+                </ul>
+
+
+                <!-- AÇÕES -->
+
+                <div class="header-icons">
+
+                    <a
+                        href="perfil.html"
+                        class="header-icon"
+                        title="Meu perfil">
+
+                        <i class="fa-regular fa-circle-user"></i>
+
+                    </a>
+
+
+                    <a
+                        href="favoritos.html"
+                        class="header-icon"
+                        title="Favoritos">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </a>
+
+
+                    <a
+                        href="carrinho.html"
+                        class="header-icon"
+                        title="Carrinho">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                    </a>
+
+
+                    <a
+                        href="auth/login.html"
+                        class="login-btn text-decoration-none">
+
+                        <i class="fa-solid fa-right-to-bracket me-1"></i>
+
+                        Entrar
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="category-hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                VERRIS / COLLECTION
+            </span>
+
+            <h1 class="hero-title">
+                AIR <span>JORDAN</span>
+            </h1>
+
+            <p class="hero-description">
+
+                Explore nossa seleção de Air Jordan.
+                Modelos clássicos e diferentes colorways
+                reunidos em uma coleção exclusiva da Verris.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUTOS
+===================================================== -->
+
+<main class="products-section">
+
+    <div class="container">
+
+
+        <div class="section-top">
+
+            <div>
+
+                <h2 class="section-title">
+                    Jordan 5
+                </h2>
+
+                <p class="section-subtitle">
+                    Confira os modelos disponíveis na coleção.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- =================================================
+                 PRODUTO 01
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://imgnike-a.akamaihd.net/768x768/118467IEA1.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro OG Black Metallic">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro OG Black Metallic
+                        </h5>
+
+                        <p class="product-description">
+                            Clássico Black Metallic com visual icônico e atemporal.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 02
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://imgnike-a.akamaihd.net/768x768/02568815A11.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro UNC">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro UNC
+                        </h5>
+
+                        <p class="product-description">
+                            Design icônico com a tradicional tonalidade azul UNC.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 03
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://imgnike-a.akamaihd.net/768x768/109475IDA8.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro Wolf Grey">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro Wolf Grey
+                        </h5>
+
+                        <p class="product-description">
+                            Visual clean em uma colorway sofisticada.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 04
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://imgnike-a.akamaihd.net/768x768/028483NXA10.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro Army Olive">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro Army Olive
+                        </h5>
+
+                        <p class="product-description">
+                            Colorway inspirada no estilo militar com presença marcante.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 05
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://sportness.com.br/cdn/shop/files/529566-800-800.webp?v=1693335094&width=600e"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro Aqua">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro Aqua
+                        </h5>
+
+                        <p class="product-description">
+                            Colorway marcante com identidade própria.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 06
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/8376c85a-469e-489a-b087-36aefd02cdeb/air-jordan-5-fire-red-release-date.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Fire Red">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Fire Red
+                        </h5>
+
+                        <p class="product-description">
+                            Visual esportivo com detalhes em vermelho.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 07
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://limitedresell.com/6152-marketplace_1500/air-jordan-5-retro-dark-concord.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro Concord">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro Concord
+                        </h5>
+
+                        <p class="product-description">
+                            Silhueta lendária com uma combinação de cores marcante.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 08
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://droper-media.us-southeast-1.linodeobjects.com/210202316363872.webp"
+                            class="produto-img"
+                            alt="Air Jordan 5 Proton Dust">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Proton Dust
+                        </h5>
+
+                        <p class="product-description">
+                            Visual clean e moderno para diferentes combinações.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 09
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://tiennemilano.com/cdn/shop/files/jordan-5-retro-off-white-black-muslin-sneakers-scarpe-810077_3074ae53-a6a2-4311-a120-587aabebc316.jpg?v=1765967818&width=1000g"
+                            class="produto-img"
+                            alt="Air Jordan 5 Off-White Muslin">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Off-White Muslin
+                        </h5>
+
+                        <p class="product-description">
+                            Design diferenciado com detalhes inspirados na colaboração.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 10
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSu-8Doc515j_dUfasjnTjqHM1VploeQz9GfY5gY1pzzvUOV4mdEHhvPlV1QAoBu7U1BpsrOzZc9q9Xrkfiqe8s5utt0Bh98VyJ3AYEiY9xOkxJolPgMszJFNU"
+                            class="produto-img"
+                            alt="Air Jordan 5 Retro Burgundy">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Retro Burgundy
+                        </h5>
+
+                        <p class="product-description">
+                            Uma colorway clássica com acabamento sofisticado.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 11
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://static.nike.com/a/images/w_960,q_auto,f_auto/6087eda1-2dd5-40f7-8f55-462b91524bf9/air-jordan-5-retro-release-date.jpg"
+                            class="produto-img"
+                            alt="Air Jordan 5 Medium Soft Pink">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Medium Soft Pink
+                        </h5>
+
+                        <p class="product-description">
+                            Design clean com identidade marcante.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 PRODUTO 12
+            ================================================== -->
+
+            <div class="col-12 col-md-6 col-lg-3">
+
+                <div class="product-card">
+
+                    <div class="product-image-container">
+
+                        <span class="product-badge">
+                            Jordan 5
+                        </span>
+
+                        <button
+                            type="button"
+                            class="favorite-btn"
+                            title="Adicionar aos favoritos"
+                            aria-label="Adicionar aos favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <img
+                            src="https://droper-media.us-southeast-1.linodeobjects.com/244202319321125.webp"
+                            class="produto-img"
+                            alt="Air Jordan 5 Green Bean">
+
+                    </div>
+
+                    <div class="product-body">
+
+                        <div class="product-category">
+                            Air Jordan 5
+                        </div>
+
+                        <h5 class="product-title">
+                            Air Jordan 5 Green Bean
+                        </h5>
+
+                        <p class="product-description">
+                            Clássico das quadras com visual marcante e diferenciado.
+                        </p>
+
+                        <a
+                            href="#"
+                            class="product-btn">
+
+                            <i class="fa-solid fa-bag-shopping me-2"></i>
+
+                            Adicionar ao carrinho
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="text-white">
+
+    <div class="container py-5">
+
+        <div class="row">
+
+
+            <!-- LINKS -->
+
+            <div class="col-12 col-md-3 mb-4">
+
+                <p class="fw-bold mb-3">
+                    Links Rápidos
+                </p>
+
+                <nav class="nav flex-column">
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="sobre.html">
+
+                        Quem somos
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="contato.html">
+
+                        Fale conosco
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="trabalhe_conosco-bs.html">
+
+                        Trabalhe conosco
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="perfil.html">
+
+                        Meu Perfil
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="blog.html">
+
+                        Blog
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+
+            <!-- CONTATO -->
+
+            <div class="col-12 col-md-4 mb-4">
+
+                <p class="fw-bold mb-3">
+                    Contatos
+                </p>
+
+                <nav class="nav flex-column">
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="tel:+5524992582209">
+
+                        <i class="fa-solid fa-headset me-2"></i>
+
+                        +55 (24) 99258-2209
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="mailto:victorhugorochadasilva021@gmail.com">
+
+                        <i class="fa-solid fa-envelope me-2"></i>
+
+                        victorhugorochadasilva021@gmail.com
+
+                    </a>
+
+                    <a
+                        class="nav-link text-white px-0 py-1"
+                        href="suporte.html">
+
+                        <i class="fa-solid fa-circle-question me-2"></i>
+
+                        Suporte
+
+                    </a>
+
+                </nav>
+
+            </div>
+
+
+
+            <!-- REDES -->
+
+            <div class="col-12 col-md-5 text-md-end mb-4">
+
+                <p class="fw-bold mb-3">
+                    Redes Sociais
+                </p>
+
+                <a
+                    href="https://github.com/victorhugorochadasilva021-droid/"
+                    target="_blank"
+                    class="social-btn me-1"
+                    title="GitHub">
+
+                    <i class="fa-brands fa-github"></i>
+
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@verriseven"
+                    target="_blank"
+                    class="social-btn me-1"
+                    title="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+                <a
+                    href="https://www.instagram.com/vhrdwhh"
+                    target="_blank"
+                    class="social-btn me-1"
+                    title="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a
+                    href="https://br.linkedin.com/"
+                    target="_blank"
+                    class="social-btn me-1"
+                    title="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin"></i>
+
+                </a>
+
+                <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    class="social-btn"
+                    title="Facebook">
+
+                    <i class="fa-brands fa-facebook"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <hr class="border-secondary">
+
+
+        <div class="row align-items-center mt-4">
+
+
+            <div class="col-12 col-md-2 mb-3">
+
+                <select
+                    class="form-select form-select-sm text-white bg-dark border-secondary">
+
+                    <option selected>
+                        Português
+                    </option>
+
+                    <option>
+                        English
+                    </option>
+
+                    <option>
+                        French
+                    </option>
+
+                    <option>
+                        Spanish
+                    </option>
+
+                    <option>
+                        Russian
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="col-12 col-md-2 mb-3">
+
+                <select
+                    class="form-select form-select-sm text-white bg-dark border-secondary">
+
+                    <option selected>
+                        Real
+                    </option>
+
+                    <option>
+                        US Dollars
+                    </option>
+
+                    <option>
+                        Euro
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="col-12 col-md-8 mb-3">
+
+                <p class="text-md-end text-secondary mb-0">
+
+                    <a
+                        href="termos.html"
+                        class="text-white text-decoration-none">
+
+                        Termos e condições
+
+                    </a>
+
+                    <span class="mx-2">|</span>
+
+                    <a
+                        href="privacidade.html"
+                        class="text-white text-decoration-none">
+
+                        Privacidade
+
+                    </a>
+
+                    <span class="mx-2">|</span>
+
+                    <span class="text-white">
+                        © 2026 - Verris Company
+                    </span>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+</body>
+
+</html>

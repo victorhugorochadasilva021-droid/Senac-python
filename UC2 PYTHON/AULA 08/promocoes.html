@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Promoções - Verris Company</title>
+
+    <meta name="description"
+        content="Confira as melhores promoções e ofertas da Verris Company.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(0, 102, 255, 0.12), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(0, 153, 255, 0.10), transparent 30%),
+                #f5f7fb;
+            color: #111827;
+        }
+
+        /* =========================
+           PROMO BAR
+        ========================= */
+
+        .promo-bar {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 9px 15px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .promo-bar span {
+            color: #60a5fa;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .main-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border-bottom: 1px solid rgba(17, 24, 39, 0.08);
+        }
+
+        .navbar {
+            min-height: 76px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 42px;
+            height: 42px;
+            border: 2px solid #111827;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 900;
+            font-style: italic;
+            transform: skew(-8deg);
+            margin-right: 10px;
+            color: #111827;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-title {
+            color: #111827;
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        }
+
+        .logo-subtitle {
+            color: #6b7280;
+            font-size: 8px;
+            font-weight: 600;
+            letter-spacing: 4px;
+            margin-top: 4px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            margin: 0 5px;
+            transition: 0.25s;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #0066ff;
+        }
+
+        .header-icons {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: 0.25s;
+        }
+
+        .header-icon:hover {
+            background: #eef5ff;
+            color: #0066ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            padding: 90px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: rgba(0, 102, 255, 0.13);
+            border-radius: 50%;
+            filter: blur(90px);
+            top: -160px;
+            right: -120px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #e8f2ff;
+            color: #0066ff;
+            padding: 8px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(44px, 6vw, 72px);
+            font-weight: 900;
+            letter-spacing: -3px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #0066ff;
+        }
+
+        .hero p {
+            color: #6b7280;
+            font-size: 18px;
+            line-height: 1.7;
+            max-width: 680px;
+            margin: auto;
+        }
+
+        /* =========================
+           SECTION
+        ========================= */
+
+        .section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 12px;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        /* =========================
+           OFERTA DESTAQUE
+        ========================= */
+
+        .offer-banner {
+            background: #111827;
+            color: white;
+            border-radius: 28px;
+            padding: 48px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 20px 55px rgba(15, 23, 42, 0.14);
+        }
+
+        .offer-banner::before {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            background: rgba(0, 102, 255, 0.30);
+            border-radius: 50%;
+            filter: blur(80px);
+            right: -100px;
+            top: -160px;
+        }
+
+        .offer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .offer-label {
+            display: inline-block;
+            background: #0066ff;
+            padding: 7px 13px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+        }
+
+        .offer-banner h2 {
+            font-size: clamp(30px, 4vw, 46px);
+            font-weight: 850;
+            margin-bottom: 12px;
+        }
+
+        .offer-banner p {
+            color: #d1d5db;
+            max-width: 650px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .offer-price {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .old-price {
+            color: #9ca3af;
+            text-decoration: line-through;
+            font-size: 17px;
+        }
+
+        .new-price {
+            font-size: 31px;
+            font-weight: 900;
+            color: white;
+        }
+
+        .discount {
+            background: #dbeafe;
+            color: #0066ff;
+            padding: 6px 10px;
+            border-radius: 7px;
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .btn-offer {
+            display: inline-block;
+            background: white;
+            color: #111827;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 13px;
+            transition: 0.25s;
+        }
+
+        .btn-offer:hover {
+            background: #e8f2ff;
+            color: #0066ff;
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FILTROS
+        ========================= */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter-btn {
+            background: white;
+            color: #374151;
+            border: 1px solid #dbe2ea;
+            border-radius: 50px;
+            padding: 9px 17px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #0066ff;
+            color: white;
+            border-color: #0066ff;
+        }
+
+        /* =========================
+           PRODUCT CARD
+        ========================= */
+
+        .product-card {
+            height: 100%;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(255, 255, 255, 0.95);
+            border-radius: 22px;
+            overflow: hidden;
+            box-shadow: 0 14px 40px rgba(15, 23, 42, 0.07);
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 22px 50px rgba(15, 23, 42, 0.13);
+        }
+
+        .product-image {
+            height: 285px;
+            background: #f1f3f6;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: 0.45s;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.06);
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 2;
+            background: #0066ff;
+            color: white;
+            padding: 7px 11px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 800;
+        }
+
+        .favorite {
+            position: absolute;
+            top: 13px;
+            right: 13px;
+            width: 38px;
+            height: 38px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            text-decoration: none;
+            z-index: 2;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: 0.25s;
+        }
+
+        .favorite:hover {
+            color: #0066ff;
+            transform: scale(1.08);
+        }
+
+        .product-body {
+            padding: 23px;
+        }
+
+        .product-category {
+            color: #6b7280;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .product-body h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 9px;
+        }
+
+        .product-description {
+            color: #6b7280;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 16px;
+        }
+
+        .product-old-price {
+            color: #9ca3af;
+            text-decoration: line-through;
+            font-size: 13px;
+        }
+
+        .product-price {
+            color: #111827;
+            font-size: 21px;
+            font-weight: 900;
+        }
+
+        .btn-product {
+            width: 100%;
+            display: block;
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 11px;
+            border-radius: 11px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 800;
+            transition: 0.25s;
+        }
+
+        .btn-product:hover {
+            background: #0066ff;
+            color: white;
+        }
+
+        /* =========================
+           BENEFÍCIOS
+        ========================= */
+
+        .benefit-card {
+            height: 100%;
+            padding: 28px;
+            background: white;
+            border-radius: 20px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .benefit-icon {
+            width: 52px;
+            height: 52px;
+            background: #e8f2ff;
+            color: #0066ff;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 21px;
+            margin-bottom: 17px;
+        }
+
+        .benefit-card h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0b1120;
+            color: white;
+            margin-top: 70px;
+            padding: 60px 0 25px;
+        }
+
+        .footer-logo .logo-title {
+            color: white;
+        }
+
+        .footer-logo .logo-icon {
+            border-color: white;
+            color: white;
+        }
+
+        .footer-logo .logo-subtitle {
+            color: #9ca3af;
+        }
+
+        .footer-text {
+            color: #9ca3af;
+            font-size: 14px;
+            line-height: 1.7;
+            max-width: 330px;
+        }
+
+        footer h5 {
+            font-size: 15px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-left: 3px;
+        }
+
+        .footer-contact {
+            color: #9ca3af;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .footer-contact i {
+            color: #60a5fa;
+            width: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .social-links a {
+            width: 37px;
+            height: 37px;
+            border: 1px solid #374151;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #d1d5db;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+
+        .social-links a:hover {
+            background: #0066ff;
+            border-color: #0066ff;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #1f2937;
+            margin-top: 45px;
+            padding-top: 22px;
+            color: #6b7280;
+            font-size: 12px;
+        }
+
+        /* =========================
+           RESPONSIVO
+        ========================= */
+
+        @media (max-width: 991px) {
+
+            .header-icons {
+                margin-top: 15px;
+            }
+
+            .hero {
+                padding: 70px 0 50px;
+            }
+
+            .offer-banner {
+                padding: 38px 30px;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .section-title {
+                font-size: 29px;
+            }
+
+            .offer-banner h2 {
+                font-size: 31px;
+            }
+
+            .offer-price {
+                flex-wrap: wrap;
+            }
+
+            .product-image {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =========================
+         PROMO BAR
+    ========================= -->
+
+    <div class="promo-bar">
+        🔥 <span>Ofertas especiais</span> por tempo limitado
+    </div>
+
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
+    <header class="main-header">
+
+        <nav class="navbar navbar-expand-lg">
+
+            <div class="container">
+
+                <!-- LOGO -->
+
+                <a href="index.html" class="logo">
+
+                    <div class="logo-icon">
+                        V
+                    </div>
+
+                    <div class="logo-text">
+
+                        <span class="logo-title">
+                            VERRIS
+                        </span>
+
+                        <span class="logo-subtitle">
+                            COMPANY
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <!-- BOTÃO MOBILE -->
+
+                <button class="navbar-toggler border-0 shadow-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarVerris"
+                    aria-controls="navbarVerris"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                    <i class="bi bi-list fs-2"></i>
+
+                </button>
+
+
+                <!-- MENU -->
+
+                <div class="collapse navbar-collapse" id="navbarVerris">
+
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+
+                    <!-- ÍCONES -->
+
+                    <div class="header-icons">
+
+                        <a href="perfil.html"
+                            class="header-icon"
+                            title="Perfil">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </a>
+
+                        <a href="favoritos.html"
+                            class="header-icon"
+                            title="Favoritos">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </a>
+
+                        <a href="carrinho.html"
+                            class="header-icon"
+                            title="Carrinho">
+
+                            <i class="fa-solid fa-bag-shopping"></i>
+
+                        </a>
+
+                        <a href="auth/login.html"
+                            class="header-icon"
+                            title="Entrar">
+
+                            <i class="fa-solid fa-right-to-bracket"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <span class="hero-badge">
+                    Ofertas Verris
+                </span>
+
+                <h1>
+                    Seu próximo par por <span>menos.</span>
+                </h1>
+
+                <p>
+                    Aproveite descontos especiais em alguns dos nossos
+                    sneakers selecionados. Escolha seu modelo e garanta
+                    sua oferta enquanto estiver disponível.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         OFERTA DESTAQUE
+    ========================= -->
+
+    <section class="section pt-0">
+
+        <div class="container">
+
+            <div class="offer-banner">
+
+                <div class="offer-content">
+
+                    <span class="offer-label">
+                        Oferta destaque
+                    </span>
+
+                    <h2>
+                        Air Jordan 5 Retro
+                    </h2>
+
+                    <p>
+                        Uma das silhuetas mais marcantes da Jordan Brand
+                        agora com uma condição especial na Verris.
+                    </p>
+
+                    <div class="offer-price">
+
+                        <span class="old-price">
+                            R$ 1.899,90
+                        </span>
+
+                        <span class="new-price">
+                            R$ 1.499,90
+                        </span>
+
+                        <span class="discount">
+                            -21%
+                        </span>
+
+                    </div>
+
+                    <a href="produto.html" class="btn-offer">
+                        Ver produto
+                        <i class="bi bi-arrow-right ms-1"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUTOS EM OFERTA
+    ========================= -->
+
+    <section class="section bg-white">
+
+        <div class="container">
+
+            <div class="mb-4">
+
+                <h2 class="section-title">
+                    Ofertas selecionadas
+                </h2>
+
+                <p class="section-subtitle">
+                    Encontre seu próximo sneaker com preços especiais.
+                </p>
+
+            </div>
+
+
+            <!-- FILTROS -->
+
+            <div class="filters">
+
+                <a href="#" class="filter-btn active">
+                    Todos
+                </a>
+
+                <a href="#" class="filter-btn">
+                    Até 20% OFF
+                </a>
+
+                <a href="#" class="filter-btn">
+                    20% a 30% OFF
+                </a>
+
+                <a href="#" class="filter-btn">
+                    Mais de 30% OFF
+                </a>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <!-- PRODUTO 1 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -21%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://imgnike-a.akamaihd.net/768x768/118467IEA1.jpg"
+                                alt="Air Jordan 5 OG Black Metallic">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 OG Black Metallic
+                            </h3>
+
+                            <p class="product-description">
+                                Visual clássico com acabamento premium.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.899,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.499,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 2 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -18%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://imgnike-a.akamaihd.net/768x768/02568815A11.jpg"
+                                alt="Air Jordan 5 Retro UNC">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Retro UNC
+                            </h3>
+
+                            <p class="product-description">
+                                Colorway inspirada nas raízes universitárias.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.799,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.479,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 3 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -25%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://imgnike-a.akamaihd.net/768x768/109475IDA8.jpg"
+                                alt="Air Jordan 5 Retro Wolf Grey">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Retro Wolf Grey
+                            </h3>
+
+                            <p class="product-description">
+                                Design discreto com acabamento moderno.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.699,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.274,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 4 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -30%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://imgnike-a.akamaihd.net/768x768/028483NXA10.jpg"
+                                alt="Air Jordan 5 Retro Army Olive">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Retro Army Olive
+                            </h3>
+
+                            <p class="product-description">
+                                Visual marcante para composições versáteis.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.699,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.189,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 5 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -15%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://sportness.com.br/cdn/shop/files/529566-800-800.webp?v=1693335094&width=600e"
+                                alt="Air Jordan 5 Aqua">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Aqua
+                            </h3>
+
+                            <p class="product-description">
+                                Uma colorway moderna com visual esportivo.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.799,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.529,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 6 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -22%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://static.nike.com/a/images/w_1280,q_auto,f_auto/8376c85a-469e-489a-b087-36aefd02cdeb/air-jordan-5-fire-red-release-date.jpg"
+                                alt="Air Jordan 5 Fire Red">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Fire Red
+                            </h3>
+
+                            <p class="product-description">
+                                Uma das combinações de cores mais marcantes.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.899,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.479,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 7 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -27%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://limitedresell.com/6152-marketplace_1500/air-jordan-5-retro-dark-concord.jpg"
+                                alt="Air Jordan 5 Dark Concord">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Dark Concord
+                            </h3>
+
+                            <p class="product-description">
+                                Contraste forte e visual contemporâneo.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.799,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.313,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUTO 8 -->
+
+                <div class="col-md-6 col-lg-3">
+
+                    <div class="product-card">
+
+                        <div class="product-image">
+
+                            <span class="discount-badge">
+                                -20%
+                            </span>
+
+                            <a href="favoritos.html" class="favorite">
+                                <i class="fa-regular fa-heart"></i>
+                            </a>
+
+                            <img
+                                src="https://droper-media.us-southeast-1.linodeobjects.com/210202316363872.webp"
+                                alt="Air Jordan 5 Proton Dust">
+
+                        </div>
+
+                        <div class="product-body">
+
+                            <div class="product-category">
+                                Jordan 5
+                            </div>
+
+                            <h3>
+                                Air Jordan 5 Proton Dust
+                            </h3>
+
+                            <p class="product-description">
+                                Estética diferenciada e acabamento sofisticado.
+                            </p>
+
+                            <div class="price-row">
+
+                                <span class="product-old-price">
+                                    R$ 1.699,90
+                                </span>
+
+                                <span class="product-price">
+                                    R$ 1.359,90
+                                </span>
+
+                            </div>
+
+                            <a href="produto.html" class="btn-product">
+                                Ver produto
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         BENEFÍCIOS
+    ========================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="section-title">
+                    Mais vantagens para você
+                </h2>
+
+                <p class="section-subtitle">
+                    Comprar na Verris também significa aproveitar benefícios
+                    exclusivos.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+
+                        <h3>
+                            Frete grátis
+                        </h3>
+
+                        <p>
+                            Nas compras acima de R$ 499, você pode aproveitar
+                            o frete grátis para seu pedido.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+
+                        <h3>
+                            Compra segura
+                        </h3>
+
+                        <p>
+                            Seus dados e informações são tratados com cuidado
+                            durante sua experiência na Verris.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="benefit-card">
+
+                        <div class="benefit-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+
+                        <h3>
+                            Suporte
+                        </h3>
+
+                        <p>
+                            Nossa equipe está disponível para ajudar você
+                            durante sua experiência com a Verris.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="row g-5">
+
+                <!-- SOBRE -->
+
+                <div class="col-lg-4">
+
+                    <a href="index.html"
+                        class="logo footer-logo text-decoration-none">
+
+                        <div class="logo-icon">
+                            V
+                        </div>
+
+                        <div class="logo-text">
+
+                            <span class="logo-title">
+                                VERRIS
+                            </span>
+
+                            <span class="logo-subtitle">
+                                COMPANY
+                            </span>
+
+                        </div>
+
+                    </a>
+
+                    <p class="footer-text mt-4">
+                        A Verris Company é uma empresa focada em estilo,
+                        tecnologia e experiências digitais para quem vive
+                        o universo dos sneakers.
+                    </p>
+
+                    <div class="social-links">
+
+                        <a href="https://github.com/victorhugorochadasilva021-droid/"
+                            target="_blank"
+                            title="GitHub">
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+                        <a href="https://www.youtube.com/@verriseven"
+                            target="_blank"
+                            title="YouTube">
+
+                            <i class="fa-brands fa-youtube"></i>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/vhrdwhh"
+                            target="_blank"
+                            title="Instagram">
+
+                            <i class="fa-brands fa-instagram"></i>
+
+                        </a>
+
+                        <a href="https://br.linkedin.com/"
+                            target="_blank"
+                            title="LinkedIn">
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+                        <a href="https://www.facebook.com/"
+                            target="_blank"
+                            title="Facebook">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LINKS RÁPIDOS -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h5>
+                        Links rápidos
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Início
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="produtos-list.html">
+                                Produtos
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="promocoes.html">
+                                Promoções
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="sobre.html">
+                                Sobre
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="blog.html">
+                                Blog
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- EMPRESA -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h5>
+                        Empresa
+                    </h5>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="contato.html">
+                                Fale conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="trabalhe_conosco-bs.html">
+                                Trabalhe conosco
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="suporte.html">
+                                Suporte
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="termos.html">
+                                Termos de uso
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="privacidade.html">
+                                Privacidade
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTATO -->
+
+                <div class="col-lg-4">
+
+                    <h5>
+                        Fale conosco
+                    </h5>
+
+                    <div class="footer-contact">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <a href="tel:+5524992582209"
+                            class="text-decoration-none text-secondary">
+
+                            +55 (24) 99258-2209
+
+                        </a>
+
+                    </div>
+
+                    <div class="footer-contact">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <a href="mailto:victorhugorochadasilva021@gmail.com"
+                            class="text-decoration-none text-secondary">
+
+                            victorhugorochadasilva021@gmail.com
+
+                        </a>
+
+                    </div>
+
+                    <div class="footer-contact">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        Segunda a sexta, 09h às 18h
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom text-center">
+
+                © 2026 Verris Company. Todos os direitos reservados.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
